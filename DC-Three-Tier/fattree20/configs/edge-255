@@ -1,0 +1,4794 @@
+!
+!
+!
+hostname edge-255
+!
+feature bgp
+feature nv overlay
+feature vn-segment-vlan-based
+!
+router isis
+   is-type level-2
+   net 49.0255.1921.6800.0255.00
+!
+interface Ethernet1/2
+   no shutdown
+   ip address 70.0.255.0/24
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+    no shutdown
+    ip router isis
+    ip address 70.0.255.0/32
+!
+interface Ethernet0/1
+    no shutdown
+    ip router isis
+    ip address 10.2.193.1/31
+!
+interface Ethernet1/1
+    no shutdown
+    ip router isis
+    ip address 10.2.203.1/31
+!
+interface Ethernet2/1
+    no shutdown
+    ip router isis
+    ip address 10.2.213.1/31
+!
+interface Ethernet3/1
+    no shutdown
+    ip router isis
+    ip address 10.2.223.1/31
+!
+interface Ethernet4/1
+    no shutdown
+    ip router isis
+    ip address 10.2.233.1/31
+!
+interface Ethernet5/1
+    no shutdown
+    ip router isis
+    ip address 10.2.243.1/31
+!
+interface Ethernet6/1
+    no shutdown
+    ip router isis
+    ip address 10.2.253.1/31
+!
+interface Ethernet7/1
+    no shutdown
+    ip router isis
+    ip address 10.3.7.1/31
+!
+interface Ethernet8/1
+    no shutdown
+    ip router isis
+    ip address 10.3.17.1/31
+!
+interface Ethernet9/1
+    no shutdown
+    ip router isis
+    ip address 10.3.27.1/31
+!
+interface Ethernet0
+    no shutdown
+    ip router isis
+    ip address 70.0.255.0/31
+!
+interface Ethernet1
+    no shutdown
+    ip router isis
+    ip address 70.0.255.2/31
+!
+router bgp 255
+    router-id 70.0.255.0
+    cluster-id 70.0.255.0
+    address-family ipv4 unicast
+       network 70.0.255.0/24
+        neighbor 10.2.193.0
+           remote-as 240
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.2.203.0
+           remote-as 241
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.2.213.0
+           remote-as 242
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.2.223.0
+           remote-as 243
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.2.233.0
+           remote-as 244
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.2.243.0
+           remote-as 245
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.2.253.0
+           remote-as 246
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.3.7.0
+           remote-as 247
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.3.17.0
+           remote-as 248
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.3.27.0
+           remote-as 249
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        vrf slice0001
+           address-family ipv4 unicast
+              network 20.0.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0002
+           address-family ipv4 unicast
+              network 20.1.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0003
+           address-family ipv4 unicast
+              network 20.2.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0004
+           address-family ipv4 unicast
+              network 20.3.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0005
+           address-family ipv4 unicast
+              network 20.4.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0006
+           address-family ipv4 unicast
+              network 20.5.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0007
+           address-family ipv4 unicast
+              network 20.6.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0008
+           address-family ipv4 unicast
+              network 20.7.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0009
+           address-family ipv4 unicast
+              network 20.8.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0010
+           address-family ipv4 unicast
+              network 20.9.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0011
+           address-family ipv4 unicast
+              network 20.10.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0012
+           address-family ipv4 unicast
+              network 20.11.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0013
+           address-family ipv4 unicast
+              network 20.12.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0014
+           address-family ipv4 unicast
+              network 20.13.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0015
+           address-family ipv4 unicast
+              network 20.14.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0016
+           address-family ipv4 unicast
+              network 20.15.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0017
+           address-family ipv4 unicast
+              network 20.16.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0018
+           address-family ipv4 unicast
+              network 20.17.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0019
+           address-family ipv4 unicast
+              network 20.18.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0020
+           address-family ipv4 unicast
+              network 20.19.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0021
+           address-family ipv4 unicast
+              network 20.20.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0022
+           address-family ipv4 unicast
+              network 20.21.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0023
+           address-family ipv4 unicast
+              network 20.22.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0024
+           address-family ipv4 unicast
+              network 20.23.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0025
+           address-family ipv4 unicast
+              network 20.24.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0026
+           address-family ipv4 unicast
+              network 20.25.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0027
+           address-family ipv4 unicast
+              network 20.26.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0028
+           address-family ipv4 unicast
+              network 20.27.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0029
+           address-family ipv4 unicast
+              network 20.28.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0030
+           address-family ipv4 unicast
+              network 20.29.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0031
+           address-family ipv4 unicast
+              network 20.30.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0032
+           address-family ipv4 unicast
+              network 20.31.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0033
+           address-family ipv4 unicast
+              network 20.32.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0034
+           address-family ipv4 unicast
+              network 20.33.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0035
+           address-family ipv4 unicast
+              network 20.34.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0036
+           address-family ipv4 unicast
+              network 20.35.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0037
+           address-family ipv4 unicast
+              network 20.36.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0038
+           address-family ipv4 unicast
+              network 20.37.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0039
+           address-family ipv4 unicast
+              network 20.38.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0040
+           address-family ipv4 unicast
+              network 20.39.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0041
+           address-family ipv4 unicast
+              network 20.40.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0042
+           address-family ipv4 unicast
+              network 20.41.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0043
+           address-family ipv4 unicast
+              network 20.42.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0044
+           address-family ipv4 unicast
+              network 20.43.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0045
+           address-family ipv4 unicast
+              network 20.44.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0046
+           address-family ipv4 unicast
+              network 20.45.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0047
+           address-family ipv4 unicast
+              network 20.46.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0048
+           address-family ipv4 unicast
+              network 20.47.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0049
+           address-family ipv4 unicast
+              network 20.48.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0050
+           address-family ipv4 unicast
+              network 20.49.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0051
+           address-family ipv4 unicast
+              network 20.50.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0052
+           address-family ipv4 unicast
+              network 20.51.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0053
+           address-family ipv4 unicast
+              network 20.52.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0054
+           address-family ipv4 unicast
+              network 20.53.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0055
+           address-family ipv4 unicast
+              network 20.54.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0056
+           address-family ipv4 unicast
+              network 20.55.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0057
+           address-family ipv4 unicast
+              network 20.56.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0058
+           address-family ipv4 unicast
+              network 20.57.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0059
+           address-family ipv4 unicast
+              network 20.58.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0060
+           address-family ipv4 unicast
+              network 20.59.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0061
+           address-family ipv4 unicast
+              network 20.60.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0062
+           address-family ipv4 unicast
+              network 20.61.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0063
+           address-family ipv4 unicast
+              network 20.62.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0064
+           address-family ipv4 unicast
+              network 20.63.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0065
+           address-family ipv4 unicast
+              network 20.64.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0066
+           address-family ipv4 unicast
+              network 20.65.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0067
+           address-family ipv4 unicast
+              network 20.66.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0068
+           address-family ipv4 unicast
+              network 20.67.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0069
+           address-family ipv4 unicast
+              network 20.68.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0070
+           address-family ipv4 unicast
+              network 20.69.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0071
+           address-family ipv4 unicast
+              network 20.70.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0072
+           address-family ipv4 unicast
+              network 20.71.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0073
+           address-family ipv4 unicast
+              network 20.72.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0074
+           address-family ipv4 unicast
+              network 20.73.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0075
+           address-family ipv4 unicast
+              network 20.74.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0076
+           address-family ipv4 unicast
+              network 20.75.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0077
+           address-family ipv4 unicast
+              network 20.76.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0078
+           address-family ipv4 unicast
+              network 20.77.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0079
+           address-family ipv4 unicast
+              network 20.78.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0080
+           address-family ipv4 unicast
+              network 20.79.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0081
+           address-family ipv4 unicast
+              network 20.80.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0082
+           address-family ipv4 unicast
+              network 20.81.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0083
+           address-family ipv4 unicast
+              network 20.82.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0084
+           address-family ipv4 unicast
+              network 20.83.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0085
+           address-family ipv4 unicast
+              network 20.84.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0086
+           address-family ipv4 unicast
+              network 20.85.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0087
+           address-family ipv4 unicast
+              network 20.86.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0088
+           address-family ipv4 unicast
+              network 20.87.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0089
+           address-family ipv4 unicast
+              network 20.88.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0090
+           address-family ipv4 unicast
+              network 20.89.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0091
+           address-family ipv4 unicast
+              network 20.90.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0092
+           address-family ipv4 unicast
+              network 20.91.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0093
+           address-family ipv4 unicast
+              network 20.92.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0094
+           address-family ipv4 unicast
+              network 20.93.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0095
+           address-family ipv4 unicast
+              network 20.94.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0096
+           address-family ipv4 unicast
+              network 20.95.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0097
+           address-family ipv4 unicast
+              network 20.96.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0098
+           address-family ipv4 unicast
+              network 20.97.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0099
+           address-family ipv4 unicast
+              network 20.98.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0100
+           address-family ipv4 unicast
+              network 20.99.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0101
+           address-family ipv4 unicast
+              network 20.100.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0102
+           address-family ipv4 unicast
+              network 20.101.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0103
+           address-family ipv4 unicast
+              network 20.102.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0104
+           address-family ipv4 unicast
+              network 20.103.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0105
+           address-family ipv4 unicast
+              network 20.104.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0106
+           address-family ipv4 unicast
+              network 20.105.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0107
+           address-family ipv4 unicast
+              network 20.106.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0108
+           address-family ipv4 unicast
+              network 20.107.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0109
+           address-family ipv4 unicast
+              network 20.108.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0110
+           address-family ipv4 unicast
+              network 20.109.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0111
+           address-family ipv4 unicast
+              network 20.110.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0112
+           address-family ipv4 unicast
+              network 20.111.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0113
+           address-family ipv4 unicast
+              network 20.112.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0114
+           address-family ipv4 unicast
+              network 20.113.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0115
+           address-family ipv4 unicast
+              network 20.114.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0116
+           address-family ipv4 unicast
+              network 20.115.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0117
+           address-family ipv4 unicast
+              network 20.116.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0118
+           address-family ipv4 unicast
+              network 20.117.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0119
+           address-family ipv4 unicast
+              network 20.118.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0120
+           address-family ipv4 unicast
+              network 20.119.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0121
+           address-family ipv4 unicast
+              network 20.120.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0122
+           address-family ipv4 unicast
+              network 20.121.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0123
+           address-family ipv4 unicast
+              network 20.122.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0124
+           address-family ipv4 unicast
+              network 20.123.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0125
+           address-family ipv4 unicast
+              network 20.124.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0126
+           address-family ipv4 unicast
+              network 20.125.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0127
+           address-family ipv4 unicast
+              network 20.126.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0128
+           address-family ipv4 unicast
+              network 20.127.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0129
+           address-family ipv4 unicast
+              network 20.128.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0130
+           address-family ipv4 unicast
+              network 20.129.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0131
+           address-family ipv4 unicast
+              network 20.130.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0132
+           address-family ipv4 unicast
+              network 20.131.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0133
+           address-family ipv4 unicast
+              network 20.132.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0134
+           address-family ipv4 unicast
+              network 20.133.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0135
+           address-family ipv4 unicast
+              network 20.134.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0136
+           address-family ipv4 unicast
+              network 20.135.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0137
+           address-family ipv4 unicast
+              network 20.136.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0138
+           address-family ipv4 unicast
+              network 20.137.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0139
+           address-family ipv4 unicast
+              network 20.138.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0140
+           address-family ipv4 unicast
+              network 20.139.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0141
+           address-family ipv4 unicast
+              network 20.140.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0142
+           address-family ipv4 unicast
+              network 20.141.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0143
+           address-family ipv4 unicast
+              network 20.142.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0144
+           address-family ipv4 unicast
+              network 20.143.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0145
+           address-family ipv4 unicast
+              network 20.144.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0146
+           address-family ipv4 unicast
+              network 20.145.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0147
+           address-family ipv4 unicast
+              network 20.146.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0148
+           address-family ipv4 unicast
+              network 20.147.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0149
+           address-family ipv4 unicast
+              network 20.148.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0150
+           address-family ipv4 unicast
+              network 20.149.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0151
+           address-family ipv4 unicast
+              network 20.150.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0152
+           address-family ipv4 unicast
+              network 20.151.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0153
+           address-family ipv4 unicast
+              network 20.152.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0154
+           address-family ipv4 unicast
+              network 20.153.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0155
+           address-family ipv4 unicast
+              network 20.154.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0156
+           address-family ipv4 unicast
+              network 20.155.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0157
+           address-family ipv4 unicast
+              network 20.156.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0158
+           address-family ipv4 unicast
+              network 20.157.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0159
+           address-family ipv4 unicast
+              network 20.158.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0160
+           address-family ipv4 unicast
+              network 20.159.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0161
+           address-family ipv4 unicast
+              network 20.160.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0162
+           address-family ipv4 unicast
+              network 20.161.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0163
+           address-family ipv4 unicast
+              network 20.162.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0164
+           address-family ipv4 unicast
+              network 20.163.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0165
+           address-family ipv4 unicast
+              network 20.164.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0166
+           address-family ipv4 unicast
+              network 20.165.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0167
+           address-family ipv4 unicast
+              network 20.166.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0168
+           address-family ipv4 unicast
+              network 20.167.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0169
+           address-family ipv4 unicast
+              network 20.168.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0170
+           address-family ipv4 unicast
+              network 20.169.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0171
+           address-family ipv4 unicast
+              network 20.170.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0172
+           address-family ipv4 unicast
+              network 20.171.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0173
+           address-family ipv4 unicast
+              network 20.172.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0174
+           address-family ipv4 unicast
+              network 20.173.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0175
+           address-family ipv4 unicast
+              network 20.174.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0176
+           address-family ipv4 unicast
+              network 20.175.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0177
+           address-family ipv4 unicast
+              network 20.176.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0178
+           address-family ipv4 unicast
+              network 20.177.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0179
+           address-family ipv4 unicast
+              network 20.178.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0180
+           address-family ipv4 unicast
+              network 20.179.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0181
+           address-family ipv4 unicast
+              network 20.180.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0182
+           address-family ipv4 unicast
+              network 20.181.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0183
+           address-family ipv4 unicast
+              network 20.182.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0184
+           address-family ipv4 unicast
+              network 20.183.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0185
+           address-family ipv4 unicast
+              network 20.184.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0186
+           address-family ipv4 unicast
+              network 20.185.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0187
+           address-family ipv4 unicast
+              network 20.186.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0188
+           address-family ipv4 unicast
+              network 20.187.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0189
+           address-family ipv4 unicast
+              network 20.188.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0190
+           address-family ipv4 unicast
+              network 20.189.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0191
+           address-family ipv4 unicast
+              network 20.190.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0192
+           address-family ipv4 unicast
+              network 20.191.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0193
+           address-family ipv4 unicast
+              network 20.192.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0194
+           address-family ipv4 unicast
+              network 20.193.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0195
+           address-family ipv4 unicast
+              network 20.194.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0196
+           address-family ipv4 unicast
+              network 20.195.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0197
+           address-family ipv4 unicast
+              network 20.196.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0198
+           address-family ipv4 unicast
+              network 20.197.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0199
+           address-family ipv4 unicast
+              network 20.198.76.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0200
+           address-family ipv4 unicast
+              network 20.199.76.0/24
+              advertise l2vpn evpn
+           !
+vrf context slice0001
+    vni 1
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:1 evpn
+        route-target export 100:1 evpn
+!
+vrf context slice0002
+    vni 2
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:2 evpn
+        route-target export 100:2 evpn
+!
+vrf context slice0003
+    vni 3
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:3 evpn
+        route-target export 100:3 evpn
+!
+vrf context slice0004
+    vni 4
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:4 evpn
+        route-target export 100:4 evpn
+!
+vrf context slice0005
+    vni 5
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:5 evpn
+        route-target export 100:5 evpn
+!
+vrf context slice0006
+    vni 6
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:6 evpn
+        route-target export 100:6 evpn
+!
+vrf context slice0007
+    vni 7
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:7 evpn
+        route-target export 100:7 evpn
+!
+vrf context slice0008
+    vni 8
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:8 evpn
+        route-target export 100:8 evpn
+!
+vrf context slice0009
+    vni 9
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:9 evpn
+        route-target export 100:9 evpn
+!
+vrf context slice0010
+    vni 10
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:10 evpn
+        route-target export 100:10 evpn
+!
+vrf context slice0011
+    vni 11
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:11 evpn
+        route-target export 100:11 evpn
+!
+vrf context slice0012
+    vni 12
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:12 evpn
+        route-target export 100:12 evpn
+!
+vrf context slice0013
+    vni 13
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:13 evpn
+        route-target export 100:13 evpn
+!
+vrf context slice0014
+    vni 14
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:14 evpn
+        route-target export 100:14 evpn
+!
+vrf context slice0015
+    vni 15
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:15 evpn
+        route-target export 100:15 evpn
+!
+vrf context slice0016
+    vni 16
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:16 evpn
+        route-target export 100:16 evpn
+!
+vrf context slice0017
+    vni 17
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:17 evpn
+        route-target export 100:17 evpn
+!
+vrf context slice0018
+    vni 18
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:18 evpn
+        route-target export 100:18 evpn
+!
+vrf context slice0019
+    vni 19
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:19 evpn
+        route-target export 100:19 evpn
+!
+vrf context slice0020
+    vni 20
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:20 evpn
+        route-target export 100:20 evpn
+!
+vrf context slice0021
+    vni 21
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:21 evpn
+        route-target export 100:21 evpn
+!
+vrf context slice0022
+    vni 22
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:22 evpn
+        route-target export 100:22 evpn
+!
+vrf context slice0023
+    vni 23
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:23 evpn
+        route-target export 100:23 evpn
+!
+vrf context slice0024
+    vni 24
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:24 evpn
+        route-target export 100:24 evpn
+!
+vrf context slice0025
+    vni 25
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:25 evpn
+        route-target export 100:25 evpn
+!
+vrf context slice0026
+    vni 26
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:26 evpn
+        route-target export 100:26 evpn
+!
+vrf context slice0027
+    vni 27
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:27 evpn
+        route-target export 100:27 evpn
+!
+vrf context slice0028
+    vni 28
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:28 evpn
+        route-target export 100:28 evpn
+!
+vrf context slice0029
+    vni 29
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:29 evpn
+        route-target export 100:29 evpn
+!
+vrf context slice0030
+    vni 30
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:30 evpn
+        route-target export 100:30 evpn
+!
+vrf context slice0031
+    vni 31
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:31 evpn
+        route-target export 100:31 evpn
+!
+vrf context slice0032
+    vni 32
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:32 evpn
+        route-target export 100:32 evpn
+!
+vrf context slice0033
+    vni 33
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:33 evpn
+        route-target export 100:33 evpn
+!
+vrf context slice0034
+    vni 34
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:34 evpn
+        route-target export 100:34 evpn
+!
+vrf context slice0035
+    vni 35
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:35 evpn
+        route-target export 100:35 evpn
+!
+vrf context slice0036
+    vni 36
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:36 evpn
+        route-target export 100:36 evpn
+!
+vrf context slice0037
+    vni 37
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:37 evpn
+        route-target export 100:37 evpn
+!
+vrf context slice0038
+    vni 38
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:38 evpn
+        route-target export 100:38 evpn
+!
+vrf context slice0039
+    vni 39
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:39 evpn
+        route-target export 100:39 evpn
+!
+vrf context slice0040
+    vni 40
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:40 evpn
+        route-target export 100:40 evpn
+!
+vrf context slice0041
+    vni 41
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:41 evpn
+        route-target export 100:41 evpn
+!
+vrf context slice0042
+    vni 42
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:42 evpn
+        route-target export 100:42 evpn
+!
+vrf context slice0043
+    vni 43
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:43 evpn
+        route-target export 100:43 evpn
+!
+vrf context slice0044
+    vni 44
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:44 evpn
+        route-target export 100:44 evpn
+!
+vrf context slice0045
+    vni 45
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:45 evpn
+        route-target export 100:45 evpn
+!
+vrf context slice0046
+    vni 46
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:46 evpn
+        route-target export 100:46 evpn
+!
+vrf context slice0047
+    vni 47
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:47 evpn
+        route-target export 100:47 evpn
+!
+vrf context slice0048
+    vni 48
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:48 evpn
+        route-target export 100:48 evpn
+!
+vrf context slice0049
+    vni 49
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:49 evpn
+        route-target export 100:49 evpn
+!
+vrf context slice0050
+    vni 50
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:50 evpn
+        route-target export 100:50 evpn
+!
+vrf context slice0051
+    vni 51
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:51 evpn
+        route-target export 100:51 evpn
+!
+vrf context slice0052
+    vni 52
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:52 evpn
+        route-target export 100:52 evpn
+!
+vrf context slice0053
+    vni 53
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:53 evpn
+        route-target export 100:53 evpn
+!
+vrf context slice0054
+    vni 54
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:54 evpn
+        route-target export 100:54 evpn
+!
+vrf context slice0055
+    vni 55
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:55 evpn
+        route-target export 100:55 evpn
+!
+vrf context slice0056
+    vni 56
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:56 evpn
+        route-target export 100:56 evpn
+!
+vrf context slice0057
+    vni 57
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:57 evpn
+        route-target export 100:57 evpn
+!
+vrf context slice0058
+    vni 58
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:58 evpn
+        route-target export 100:58 evpn
+!
+vrf context slice0059
+    vni 59
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:59 evpn
+        route-target export 100:59 evpn
+!
+vrf context slice0060
+    vni 60
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:60 evpn
+        route-target export 100:60 evpn
+!
+vrf context slice0061
+    vni 61
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:61 evpn
+        route-target export 100:61 evpn
+!
+vrf context slice0062
+    vni 62
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:62 evpn
+        route-target export 100:62 evpn
+!
+vrf context slice0063
+    vni 63
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:63 evpn
+        route-target export 100:63 evpn
+!
+vrf context slice0064
+    vni 64
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:64 evpn
+        route-target export 100:64 evpn
+!
+vrf context slice0065
+    vni 65
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:65 evpn
+        route-target export 100:65 evpn
+!
+vrf context slice0066
+    vni 66
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:66 evpn
+        route-target export 100:66 evpn
+!
+vrf context slice0067
+    vni 67
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:67 evpn
+        route-target export 100:67 evpn
+!
+vrf context slice0068
+    vni 68
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:68 evpn
+        route-target export 100:68 evpn
+!
+vrf context slice0069
+    vni 69
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:69 evpn
+        route-target export 100:69 evpn
+!
+vrf context slice0070
+    vni 70
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:70 evpn
+        route-target export 100:70 evpn
+!
+vrf context slice0071
+    vni 71
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:71 evpn
+        route-target export 100:71 evpn
+!
+vrf context slice0072
+    vni 72
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:72 evpn
+        route-target export 100:72 evpn
+!
+vrf context slice0073
+    vni 73
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:73 evpn
+        route-target export 100:73 evpn
+!
+vrf context slice0074
+    vni 74
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:74 evpn
+        route-target export 100:74 evpn
+!
+vrf context slice0075
+    vni 75
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:75 evpn
+        route-target export 100:75 evpn
+!
+vrf context slice0076
+    vni 76
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:76 evpn
+        route-target export 100:76 evpn
+!
+vrf context slice0077
+    vni 77
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:77 evpn
+        route-target export 100:77 evpn
+!
+vrf context slice0078
+    vni 78
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:78 evpn
+        route-target export 100:78 evpn
+!
+vrf context slice0079
+    vni 79
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:79 evpn
+        route-target export 100:79 evpn
+!
+vrf context slice0080
+    vni 80
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:80 evpn
+        route-target export 100:80 evpn
+!
+vrf context slice0081
+    vni 81
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:81 evpn
+        route-target export 100:81 evpn
+!
+vrf context slice0082
+    vni 82
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:82 evpn
+        route-target export 100:82 evpn
+!
+vrf context slice0083
+    vni 83
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:83 evpn
+        route-target export 100:83 evpn
+!
+vrf context slice0084
+    vni 84
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:84 evpn
+        route-target export 100:84 evpn
+!
+vrf context slice0085
+    vni 85
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:85 evpn
+        route-target export 100:85 evpn
+!
+vrf context slice0086
+    vni 86
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:86 evpn
+        route-target export 100:86 evpn
+!
+vrf context slice0087
+    vni 87
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:87 evpn
+        route-target export 100:87 evpn
+!
+vrf context slice0088
+    vni 88
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:88 evpn
+        route-target export 100:88 evpn
+!
+vrf context slice0089
+    vni 89
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:89 evpn
+        route-target export 100:89 evpn
+!
+vrf context slice0090
+    vni 90
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:90 evpn
+        route-target export 100:90 evpn
+!
+vrf context slice0091
+    vni 91
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:91 evpn
+        route-target export 100:91 evpn
+!
+vrf context slice0092
+    vni 92
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:92 evpn
+        route-target export 100:92 evpn
+!
+vrf context slice0093
+    vni 93
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:93 evpn
+        route-target export 100:93 evpn
+!
+vrf context slice0094
+    vni 94
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:94 evpn
+        route-target export 100:94 evpn
+!
+vrf context slice0095
+    vni 95
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:95 evpn
+        route-target export 100:95 evpn
+!
+vrf context slice0096
+    vni 96
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:96 evpn
+        route-target export 100:96 evpn
+!
+vrf context slice0097
+    vni 97
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:97 evpn
+        route-target export 100:97 evpn
+!
+vrf context slice0098
+    vni 98
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:98 evpn
+        route-target export 100:98 evpn
+!
+vrf context slice0099
+    vni 99
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:99 evpn
+        route-target export 100:99 evpn
+!
+vrf context slice0100
+    vni 100
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:100 evpn
+        route-target export 100:100 evpn
+!
+vrf context slice0101
+    vni 101
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:101 evpn
+        route-target export 100:101 evpn
+!
+vrf context slice0102
+    vni 102
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:102 evpn
+        route-target export 100:102 evpn
+!
+vrf context slice0103
+    vni 103
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:103 evpn
+        route-target export 100:103 evpn
+!
+vrf context slice0104
+    vni 104
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:104 evpn
+        route-target export 100:104 evpn
+!
+vrf context slice0105
+    vni 105
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:105 evpn
+        route-target export 100:105 evpn
+!
+vrf context slice0106
+    vni 106
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:106 evpn
+        route-target export 100:106 evpn
+!
+vrf context slice0107
+    vni 107
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:107 evpn
+        route-target export 100:107 evpn
+!
+vrf context slice0108
+    vni 108
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:108 evpn
+        route-target export 100:108 evpn
+!
+vrf context slice0109
+    vni 109
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:109 evpn
+        route-target export 100:109 evpn
+!
+vrf context slice0110
+    vni 110
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:110 evpn
+        route-target export 100:110 evpn
+!
+vrf context slice0111
+    vni 111
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:111 evpn
+        route-target export 100:111 evpn
+!
+vrf context slice0112
+    vni 112
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:112 evpn
+        route-target export 100:112 evpn
+!
+vrf context slice0113
+    vni 113
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:113 evpn
+        route-target export 100:113 evpn
+!
+vrf context slice0114
+    vni 114
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:114 evpn
+        route-target export 100:114 evpn
+!
+vrf context slice0115
+    vni 115
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:115 evpn
+        route-target export 100:115 evpn
+!
+vrf context slice0116
+    vni 116
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:116 evpn
+        route-target export 100:116 evpn
+!
+vrf context slice0117
+    vni 117
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:117 evpn
+        route-target export 100:117 evpn
+!
+vrf context slice0118
+    vni 118
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:118 evpn
+        route-target export 100:118 evpn
+!
+vrf context slice0119
+    vni 119
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:119 evpn
+        route-target export 100:119 evpn
+!
+vrf context slice0120
+    vni 120
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:120 evpn
+        route-target export 100:120 evpn
+!
+vrf context slice0121
+    vni 121
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:121 evpn
+        route-target export 100:121 evpn
+!
+vrf context slice0122
+    vni 122
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:122 evpn
+        route-target export 100:122 evpn
+!
+vrf context slice0123
+    vni 123
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:123 evpn
+        route-target export 100:123 evpn
+!
+vrf context slice0124
+    vni 124
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:124 evpn
+        route-target export 100:124 evpn
+!
+vrf context slice0125
+    vni 125
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:125 evpn
+        route-target export 100:125 evpn
+!
+vrf context slice0126
+    vni 126
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:126 evpn
+        route-target export 100:126 evpn
+!
+vrf context slice0127
+    vni 127
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:127 evpn
+        route-target export 100:127 evpn
+!
+vrf context slice0128
+    vni 128
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:128 evpn
+        route-target export 100:128 evpn
+!
+vrf context slice0129
+    vni 129
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:129 evpn
+        route-target export 100:129 evpn
+!
+vrf context slice0130
+    vni 130
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:130 evpn
+        route-target export 100:130 evpn
+!
+vrf context slice0131
+    vni 131
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:131 evpn
+        route-target export 100:131 evpn
+!
+vrf context slice0132
+    vni 132
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:132 evpn
+        route-target export 100:132 evpn
+!
+vrf context slice0133
+    vni 133
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:133 evpn
+        route-target export 100:133 evpn
+!
+vrf context slice0134
+    vni 134
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:134 evpn
+        route-target export 100:134 evpn
+!
+vrf context slice0135
+    vni 135
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:135 evpn
+        route-target export 100:135 evpn
+!
+vrf context slice0136
+    vni 136
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:136 evpn
+        route-target export 100:136 evpn
+!
+vrf context slice0137
+    vni 137
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:137 evpn
+        route-target export 100:137 evpn
+!
+vrf context slice0138
+    vni 138
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:138 evpn
+        route-target export 100:138 evpn
+!
+vrf context slice0139
+    vni 139
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:139 evpn
+        route-target export 100:139 evpn
+!
+vrf context slice0140
+    vni 140
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:140 evpn
+        route-target export 100:140 evpn
+!
+vrf context slice0141
+    vni 141
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:141 evpn
+        route-target export 100:141 evpn
+!
+vrf context slice0142
+    vni 142
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:142 evpn
+        route-target export 100:142 evpn
+!
+vrf context slice0143
+    vni 143
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:143 evpn
+        route-target export 100:143 evpn
+!
+vrf context slice0144
+    vni 144
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:144 evpn
+        route-target export 100:144 evpn
+!
+vrf context slice0145
+    vni 145
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:145 evpn
+        route-target export 100:145 evpn
+!
+vrf context slice0146
+    vni 146
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:146 evpn
+        route-target export 100:146 evpn
+!
+vrf context slice0147
+    vni 147
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:147 evpn
+        route-target export 100:147 evpn
+!
+vrf context slice0148
+    vni 148
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:148 evpn
+        route-target export 100:148 evpn
+!
+vrf context slice0149
+    vni 149
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:149 evpn
+        route-target export 100:149 evpn
+!
+vrf context slice0150
+    vni 150
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:150 evpn
+        route-target export 100:150 evpn
+!
+vrf context slice0151
+    vni 151
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:151 evpn
+        route-target export 100:151 evpn
+!
+vrf context slice0152
+    vni 152
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:152 evpn
+        route-target export 100:152 evpn
+!
+vrf context slice0153
+    vni 153
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:153 evpn
+        route-target export 100:153 evpn
+!
+vrf context slice0154
+    vni 154
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:154 evpn
+        route-target export 100:154 evpn
+!
+vrf context slice0155
+    vni 155
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:155 evpn
+        route-target export 100:155 evpn
+!
+vrf context slice0156
+    vni 156
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:156 evpn
+        route-target export 100:156 evpn
+!
+vrf context slice0157
+    vni 157
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:157 evpn
+        route-target export 100:157 evpn
+!
+vrf context slice0158
+    vni 158
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:158 evpn
+        route-target export 100:158 evpn
+!
+vrf context slice0159
+    vni 159
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:159 evpn
+        route-target export 100:159 evpn
+!
+vrf context slice0160
+    vni 160
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:160 evpn
+        route-target export 100:160 evpn
+!
+vrf context slice0161
+    vni 161
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:161 evpn
+        route-target export 100:161 evpn
+!
+vrf context slice0162
+    vni 162
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:162 evpn
+        route-target export 100:162 evpn
+!
+vrf context slice0163
+    vni 163
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:163 evpn
+        route-target export 100:163 evpn
+!
+vrf context slice0164
+    vni 164
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:164 evpn
+        route-target export 100:164 evpn
+!
+vrf context slice0165
+    vni 165
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:165 evpn
+        route-target export 100:165 evpn
+!
+vrf context slice0166
+    vni 166
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:166 evpn
+        route-target export 100:166 evpn
+!
+vrf context slice0167
+    vni 167
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:167 evpn
+        route-target export 100:167 evpn
+!
+vrf context slice0168
+    vni 168
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:168 evpn
+        route-target export 100:168 evpn
+!
+vrf context slice0169
+    vni 169
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:169 evpn
+        route-target export 100:169 evpn
+!
+vrf context slice0170
+    vni 170
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:170 evpn
+        route-target export 100:170 evpn
+!
+vrf context slice0171
+    vni 171
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:171 evpn
+        route-target export 100:171 evpn
+!
+vrf context slice0172
+    vni 172
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:172 evpn
+        route-target export 100:172 evpn
+!
+vrf context slice0173
+    vni 173
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:173 evpn
+        route-target export 100:173 evpn
+!
+vrf context slice0174
+    vni 174
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:174 evpn
+        route-target export 100:174 evpn
+!
+vrf context slice0175
+    vni 175
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:175 evpn
+        route-target export 100:175 evpn
+!
+vrf context slice0176
+    vni 176
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:176 evpn
+        route-target export 100:176 evpn
+!
+vrf context slice0177
+    vni 177
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:177 evpn
+        route-target export 100:177 evpn
+!
+vrf context slice0178
+    vni 178
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:178 evpn
+        route-target export 100:178 evpn
+!
+vrf context slice0179
+    vni 179
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:179 evpn
+        route-target export 100:179 evpn
+!
+vrf context slice0180
+    vni 180
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:180 evpn
+        route-target export 100:180 evpn
+!
+vrf context slice0181
+    vni 181
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:181 evpn
+        route-target export 100:181 evpn
+!
+vrf context slice0182
+    vni 182
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:182 evpn
+        route-target export 100:182 evpn
+!
+vrf context slice0183
+    vni 183
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:183 evpn
+        route-target export 100:183 evpn
+!
+vrf context slice0184
+    vni 184
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:184 evpn
+        route-target export 100:184 evpn
+!
+vrf context slice0185
+    vni 185
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:185 evpn
+        route-target export 100:185 evpn
+!
+vrf context slice0186
+    vni 186
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:186 evpn
+        route-target export 100:186 evpn
+!
+vrf context slice0187
+    vni 187
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:187 evpn
+        route-target export 100:187 evpn
+!
+vrf context slice0188
+    vni 188
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:188 evpn
+        route-target export 100:188 evpn
+!
+vrf context slice0189
+    vni 189
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:189 evpn
+        route-target export 100:189 evpn
+!
+vrf context slice0190
+    vni 190
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:190 evpn
+        route-target export 100:190 evpn
+!
+vrf context slice0191
+    vni 191
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:191 evpn
+        route-target export 100:191 evpn
+!
+vrf context slice0192
+    vni 192
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:192 evpn
+        route-target export 100:192 evpn
+!
+vrf context slice0193
+    vni 193
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:193 evpn
+        route-target export 100:193 evpn
+!
+vrf context slice0194
+    vni 194
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:194 evpn
+        route-target export 100:194 evpn
+!
+vrf context slice0195
+    vni 195
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:195 evpn
+        route-target export 100:195 evpn
+!
+vrf context slice0196
+    vni 196
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:196 evpn
+        route-target export 100:196 evpn
+!
+vrf context slice0197
+    vni 197
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:197 evpn
+        route-target export 100:197 evpn
+!
+vrf context slice0198
+    vni 198
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:198 evpn
+        route-target export 100:198 evpn
+!
+vrf context slice0199
+    vni 199
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:199 evpn
+        route-target export 100:199 evpn
+!
+vrf context slice0200
+    vni 200
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:200 evpn
+        route-target export 100:200 evpn
+!
+interface Ethernet1/3
+   no shutdown
+   vrf member slice0001
+   ip address 20.0.76.1/24
+  !
+interface Ethernet2/3
+   no shutdown
+   vrf member slice0002
+   ip address 20.1.76.1/24
+  !
+interface Ethernet3/3
+   no shutdown
+   vrf member slice0003
+   ip address 20.2.76.1/24
+  !
+interface Ethernet4/3
+   no shutdown
+   vrf member slice0004
+   ip address 20.3.76.1/24
+  !
+interface Ethernet5/3
+   no shutdown
+   vrf member slice0005
+   ip address 20.4.76.1/24
+  !
+interface Ethernet6/3
+   no shutdown
+   vrf member slice0006
+   ip address 20.5.76.1/24
+  !
+interface Ethernet7/3
+   no shutdown
+   vrf member slice0007
+   ip address 20.6.76.1/24
+  !
+interface Ethernet8/3
+   no shutdown
+   vrf member slice0008
+   ip address 20.7.76.1/24
+  !
+interface Ethernet9/3
+   no shutdown
+   vrf member slice0009
+   ip address 20.8.76.1/24
+  !
+interface Ethernet10/3
+   no shutdown
+   vrf member slice0010
+   ip address 20.9.76.1/24
+  !
+interface Ethernet11/3
+   no shutdown
+   vrf member slice0011
+   ip address 20.10.76.1/24
+  !
+interface Ethernet12/3
+   no shutdown
+   vrf member slice0012
+   ip address 20.11.76.1/24
+  !
+interface Ethernet13/3
+   no shutdown
+   vrf member slice0013
+   ip address 20.12.76.1/24
+  !
+interface Ethernet14/3
+   no shutdown
+   vrf member slice0014
+   ip address 20.13.76.1/24
+  !
+interface Ethernet15/3
+   no shutdown
+   vrf member slice0015
+   ip address 20.14.76.1/24
+  !
+interface Ethernet16/3
+   no shutdown
+   vrf member slice0016
+   ip address 20.15.76.1/24
+  !
+interface Ethernet17/3
+   no shutdown
+   vrf member slice0017
+   ip address 20.16.76.1/24
+  !
+interface Ethernet18/3
+   no shutdown
+   vrf member slice0018
+   ip address 20.17.76.1/24
+  !
+interface Ethernet19/3
+   no shutdown
+   vrf member slice0019
+   ip address 20.18.76.1/24
+  !
+interface Ethernet20/3
+   no shutdown
+   vrf member slice0020
+   ip address 20.19.76.1/24
+  !
+interface Ethernet21/3
+   no shutdown
+   vrf member slice0021
+   ip address 20.20.76.1/24
+  !
+interface Ethernet22/3
+   no shutdown
+   vrf member slice0022
+   ip address 20.21.76.1/24
+  !
+interface Ethernet23/3
+   no shutdown
+   vrf member slice0023
+   ip address 20.22.76.1/24
+  !
+interface Ethernet24/3
+   no shutdown
+   vrf member slice0024
+   ip address 20.23.76.1/24
+  !
+interface Ethernet25/3
+   no shutdown
+   vrf member slice0025
+   ip address 20.24.76.1/24
+  !
+interface Ethernet26/3
+   no shutdown
+   vrf member slice0026
+   ip address 20.25.76.1/24
+  !
+interface Ethernet27/3
+   no shutdown
+   vrf member slice0027
+   ip address 20.26.76.1/24
+  !
+interface Ethernet28/3
+   no shutdown
+   vrf member slice0028
+   ip address 20.27.76.1/24
+  !
+interface Ethernet29/3
+   no shutdown
+   vrf member slice0029
+   ip address 20.28.76.1/24
+  !
+interface Ethernet30/3
+   no shutdown
+   vrf member slice0030
+   ip address 20.29.76.1/24
+  !
+interface Ethernet31/3
+   no shutdown
+   vrf member slice0031
+   ip address 20.30.76.1/24
+  !
+interface Ethernet32/3
+   no shutdown
+   vrf member slice0032
+   ip address 20.31.76.1/24
+  !
+interface Ethernet33/3
+   no shutdown
+   vrf member slice0033
+   ip address 20.32.76.1/24
+  !
+interface Ethernet34/3
+   no shutdown
+   vrf member slice0034
+   ip address 20.33.76.1/24
+  !
+interface Ethernet35/3
+   no shutdown
+   vrf member slice0035
+   ip address 20.34.76.1/24
+  !
+interface Ethernet36/3
+   no shutdown
+   vrf member slice0036
+   ip address 20.35.76.1/24
+  !
+interface Ethernet37/3
+   no shutdown
+   vrf member slice0037
+   ip address 20.36.76.1/24
+  !
+interface Ethernet38/3
+   no shutdown
+   vrf member slice0038
+   ip address 20.37.76.1/24
+  !
+interface Ethernet39/3
+   no shutdown
+   vrf member slice0039
+   ip address 20.38.76.1/24
+  !
+interface Ethernet40/3
+   no shutdown
+   vrf member slice0040
+   ip address 20.39.76.1/24
+  !
+interface Ethernet41/3
+   no shutdown
+   vrf member slice0041
+   ip address 20.40.76.1/24
+  !
+interface Ethernet42/3
+   no shutdown
+   vrf member slice0042
+   ip address 20.41.76.1/24
+  !
+interface Ethernet43/3
+   no shutdown
+   vrf member slice0043
+   ip address 20.42.76.1/24
+  !
+interface Ethernet44/3
+   no shutdown
+   vrf member slice0044
+   ip address 20.43.76.1/24
+  !
+interface Ethernet45/3
+   no shutdown
+   vrf member slice0045
+   ip address 20.44.76.1/24
+  !
+interface Ethernet46/3
+   no shutdown
+   vrf member slice0046
+   ip address 20.45.76.1/24
+  !
+interface Ethernet47/3
+   no shutdown
+   vrf member slice0047
+   ip address 20.46.76.1/24
+  !
+interface Ethernet48/3
+   no shutdown
+   vrf member slice0048
+   ip address 20.47.76.1/24
+  !
+interface Ethernet49/3
+   no shutdown
+   vrf member slice0049
+   ip address 20.48.76.1/24
+  !
+interface Ethernet50/3
+   no shutdown
+   vrf member slice0050
+   ip address 20.49.76.1/24
+  !
+interface Ethernet51/3
+   no shutdown
+   vrf member slice0051
+   ip address 20.50.76.1/24
+  !
+interface Ethernet52/3
+   no shutdown
+   vrf member slice0052
+   ip address 20.51.76.1/24
+  !
+interface Ethernet53/3
+   no shutdown
+   vrf member slice0053
+   ip address 20.52.76.1/24
+  !
+interface Ethernet54/3
+   no shutdown
+   vrf member slice0054
+   ip address 20.53.76.1/24
+  !
+interface Ethernet55/3
+   no shutdown
+   vrf member slice0055
+   ip address 20.54.76.1/24
+  !
+interface Ethernet56/3
+   no shutdown
+   vrf member slice0056
+   ip address 20.55.76.1/24
+  !
+interface Ethernet57/3
+   no shutdown
+   vrf member slice0057
+   ip address 20.56.76.1/24
+  !
+interface Ethernet58/3
+   no shutdown
+   vrf member slice0058
+   ip address 20.57.76.1/24
+  !
+interface Ethernet59/3
+   no shutdown
+   vrf member slice0059
+   ip address 20.58.76.1/24
+  !
+interface Ethernet60/3
+   no shutdown
+   vrf member slice0060
+   ip address 20.59.76.1/24
+  !
+interface Ethernet61/3
+   no shutdown
+   vrf member slice0061
+   ip address 20.60.76.1/24
+  !
+interface Ethernet62/3
+   no shutdown
+   vrf member slice0062
+   ip address 20.61.76.1/24
+  !
+interface Ethernet63/3
+   no shutdown
+   vrf member slice0063
+   ip address 20.62.76.1/24
+  !
+interface Ethernet64/3
+   no shutdown
+   vrf member slice0064
+   ip address 20.63.76.1/24
+  !
+interface Ethernet65/3
+   no shutdown
+   vrf member slice0065
+   ip address 20.64.76.1/24
+  !
+interface Ethernet66/3
+   no shutdown
+   vrf member slice0066
+   ip address 20.65.76.1/24
+  !
+interface Ethernet67/3
+   no shutdown
+   vrf member slice0067
+   ip address 20.66.76.1/24
+  !
+interface Ethernet68/3
+   no shutdown
+   vrf member slice0068
+   ip address 20.67.76.1/24
+  !
+interface Ethernet69/3
+   no shutdown
+   vrf member slice0069
+   ip address 20.68.76.1/24
+  !
+interface Ethernet70/3
+   no shutdown
+   vrf member slice0070
+   ip address 20.69.76.1/24
+  !
+interface Ethernet71/3
+   no shutdown
+   vrf member slice0071
+   ip address 20.70.76.1/24
+  !
+interface Ethernet72/3
+   no shutdown
+   vrf member slice0072
+   ip address 20.71.76.1/24
+  !
+interface Ethernet73/3
+   no shutdown
+   vrf member slice0073
+   ip address 20.72.76.1/24
+  !
+interface Ethernet74/3
+   no shutdown
+   vrf member slice0074
+   ip address 20.73.76.1/24
+  !
+interface Ethernet75/3
+   no shutdown
+   vrf member slice0075
+   ip address 20.74.76.1/24
+  !
+interface Ethernet76/3
+   no shutdown
+   vrf member slice0076
+   ip address 20.75.76.1/24
+  !
+interface Ethernet77/3
+   no shutdown
+   vrf member slice0077
+   ip address 20.76.76.1/24
+  !
+interface Ethernet78/3
+   no shutdown
+   vrf member slice0078
+   ip address 20.77.76.1/24
+  !
+interface Ethernet79/3
+   no shutdown
+   vrf member slice0079
+   ip address 20.78.76.1/24
+  !
+interface Ethernet80/3
+   no shutdown
+   vrf member slice0080
+   ip address 20.79.76.1/24
+  !
+interface Ethernet81/3
+   no shutdown
+   vrf member slice0081
+   ip address 20.80.76.1/24
+  !
+interface Ethernet82/3
+   no shutdown
+   vrf member slice0082
+   ip address 20.81.76.1/24
+  !
+interface Ethernet83/3
+   no shutdown
+   vrf member slice0083
+   ip address 20.82.76.1/24
+  !
+interface Ethernet84/3
+   no shutdown
+   vrf member slice0084
+   ip address 20.83.76.1/24
+  !
+interface Ethernet85/3
+   no shutdown
+   vrf member slice0085
+   ip address 20.84.76.1/24
+  !
+interface Ethernet86/3
+   no shutdown
+   vrf member slice0086
+   ip address 20.85.76.1/24
+  !
+interface Ethernet87/3
+   no shutdown
+   vrf member slice0087
+   ip address 20.86.76.1/24
+  !
+interface Ethernet88/3
+   no shutdown
+   vrf member slice0088
+   ip address 20.87.76.1/24
+  !
+interface Ethernet89/3
+   no shutdown
+   vrf member slice0089
+   ip address 20.88.76.1/24
+  !
+interface Ethernet90/3
+   no shutdown
+   vrf member slice0090
+   ip address 20.89.76.1/24
+  !
+interface Ethernet91/3
+   no shutdown
+   vrf member slice0091
+   ip address 20.90.76.1/24
+  !
+interface Ethernet92/3
+   no shutdown
+   vrf member slice0092
+   ip address 20.91.76.1/24
+  !
+interface Ethernet93/3
+   no shutdown
+   vrf member slice0093
+   ip address 20.92.76.1/24
+  !
+interface Ethernet94/3
+   no shutdown
+   vrf member slice0094
+   ip address 20.93.76.1/24
+  !
+interface Ethernet95/3
+   no shutdown
+   vrf member slice0095
+   ip address 20.94.76.1/24
+  !
+interface Ethernet96/3
+   no shutdown
+   vrf member slice0096
+   ip address 20.95.76.1/24
+  !
+interface Ethernet97/3
+   no shutdown
+   vrf member slice0097
+   ip address 20.96.76.1/24
+  !
+interface Ethernet98/3
+   no shutdown
+   vrf member slice0098
+   ip address 20.97.76.1/24
+  !
+interface Ethernet99/3
+   no shutdown
+   vrf member slice0099
+   ip address 20.98.76.1/24
+  !
+interface Ethernet100/3
+   no shutdown
+   vrf member slice0100
+   ip address 20.99.76.1/24
+  !
+interface Ethernet101/3
+   no shutdown
+   vrf member slice0101
+   ip address 20.100.76.1/24
+  !
+interface Ethernet102/3
+   no shutdown
+   vrf member slice0102
+   ip address 20.101.76.1/24
+  !
+interface Ethernet103/3
+   no shutdown
+   vrf member slice0103
+   ip address 20.102.76.1/24
+  !
+interface Ethernet104/3
+   no shutdown
+   vrf member slice0104
+   ip address 20.103.76.1/24
+  !
+interface Ethernet105/3
+   no shutdown
+   vrf member slice0105
+   ip address 20.104.76.1/24
+  !
+interface Ethernet106/3
+   no shutdown
+   vrf member slice0106
+   ip address 20.105.76.1/24
+  !
+interface Ethernet107/3
+   no shutdown
+   vrf member slice0107
+   ip address 20.106.76.1/24
+  !
+interface Ethernet108/3
+   no shutdown
+   vrf member slice0108
+   ip address 20.107.76.1/24
+  !
+interface Ethernet109/3
+   no shutdown
+   vrf member slice0109
+   ip address 20.108.76.1/24
+  !
+interface Ethernet110/3
+   no shutdown
+   vrf member slice0110
+   ip address 20.109.76.1/24
+  !
+interface Ethernet111/3
+   no shutdown
+   vrf member slice0111
+   ip address 20.110.76.1/24
+  !
+interface Ethernet112/3
+   no shutdown
+   vrf member slice0112
+   ip address 20.111.76.1/24
+  !
+interface Ethernet113/3
+   no shutdown
+   vrf member slice0113
+   ip address 20.112.76.1/24
+  !
+interface Ethernet114/3
+   no shutdown
+   vrf member slice0114
+   ip address 20.113.76.1/24
+  !
+interface Ethernet115/3
+   no shutdown
+   vrf member slice0115
+   ip address 20.114.76.1/24
+  !
+interface Ethernet116/3
+   no shutdown
+   vrf member slice0116
+   ip address 20.115.76.1/24
+  !
+interface Ethernet117/3
+   no shutdown
+   vrf member slice0117
+   ip address 20.116.76.1/24
+  !
+interface Ethernet118/3
+   no shutdown
+   vrf member slice0118
+   ip address 20.117.76.1/24
+  !
+interface Ethernet119/3
+   no shutdown
+   vrf member slice0119
+   ip address 20.118.76.1/24
+  !
+interface Ethernet120/3
+   no shutdown
+   vrf member slice0120
+   ip address 20.119.76.1/24
+  !
+interface Ethernet121/3
+   no shutdown
+   vrf member slice0121
+   ip address 20.120.76.1/24
+  !
+interface Ethernet122/3
+   no shutdown
+   vrf member slice0122
+   ip address 20.121.76.1/24
+  !
+interface Ethernet123/3
+   no shutdown
+   vrf member slice0123
+   ip address 20.122.76.1/24
+  !
+interface Ethernet124/3
+   no shutdown
+   vrf member slice0124
+   ip address 20.123.76.1/24
+  !
+interface Ethernet125/3
+   no shutdown
+   vrf member slice0125
+   ip address 20.124.76.1/24
+  !
+interface Ethernet126/3
+   no shutdown
+   vrf member slice0126
+   ip address 20.125.76.1/24
+  !
+interface Ethernet127/3
+   no shutdown
+   vrf member slice0127
+   ip address 20.126.76.1/24
+  !
+interface Ethernet128/3
+   no shutdown
+   vrf member slice0128
+   ip address 20.127.76.1/24
+  !
+interface Ethernet129/3
+   no shutdown
+   vrf member slice0129
+   ip address 20.128.76.1/24
+  !
+interface Ethernet130/3
+   no shutdown
+   vrf member slice0130
+   ip address 20.129.76.1/24
+  !
+interface Ethernet131/3
+   no shutdown
+   vrf member slice0131
+   ip address 20.130.76.1/24
+  !
+interface Ethernet132/3
+   no shutdown
+   vrf member slice0132
+   ip address 20.131.76.1/24
+  !
+interface Ethernet133/3
+   no shutdown
+   vrf member slice0133
+   ip address 20.132.76.1/24
+  !
+interface Ethernet134/3
+   no shutdown
+   vrf member slice0134
+   ip address 20.133.76.1/24
+  !
+interface Ethernet135/3
+   no shutdown
+   vrf member slice0135
+   ip address 20.134.76.1/24
+  !
+interface Ethernet136/3
+   no shutdown
+   vrf member slice0136
+   ip address 20.135.76.1/24
+  !
+interface Ethernet137/3
+   no shutdown
+   vrf member slice0137
+   ip address 20.136.76.1/24
+  !
+interface Ethernet138/3
+   no shutdown
+   vrf member slice0138
+   ip address 20.137.76.1/24
+  !
+interface Ethernet139/3
+   no shutdown
+   vrf member slice0139
+   ip address 20.138.76.1/24
+  !
+interface Ethernet140/3
+   no shutdown
+   vrf member slice0140
+   ip address 20.139.76.1/24
+  !
+interface Ethernet141/3
+   no shutdown
+   vrf member slice0141
+   ip address 20.140.76.1/24
+  !
+interface Ethernet142/3
+   no shutdown
+   vrf member slice0142
+   ip address 20.141.76.1/24
+  !
+interface Ethernet143/3
+   no shutdown
+   vrf member slice0143
+   ip address 20.142.76.1/24
+  !
+interface Ethernet144/3
+   no shutdown
+   vrf member slice0144
+   ip address 20.143.76.1/24
+  !
+interface Ethernet145/3
+   no shutdown
+   vrf member slice0145
+   ip address 20.144.76.1/24
+  !
+interface Ethernet146/3
+   no shutdown
+   vrf member slice0146
+   ip address 20.145.76.1/24
+  !
+interface Ethernet147/3
+   no shutdown
+   vrf member slice0147
+   ip address 20.146.76.1/24
+  !
+interface Ethernet148/3
+   no shutdown
+   vrf member slice0148
+   ip address 20.147.76.1/24
+  !
+interface Ethernet149/3
+   no shutdown
+   vrf member slice0149
+   ip address 20.148.76.1/24
+  !
+interface Ethernet150/3
+   no shutdown
+   vrf member slice0150
+   ip address 20.149.76.1/24
+  !
+interface Ethernet151/3
+   no shutdown
+   vrf member slice0151
+   ip address 20.150.76.1/24
+  !
+interface Ethernet152/3
+   no shutdown
+   vrf member slice0152
+   ip address 20.151.76.1/24
+  !
+interface Ethernet153/3
+   no shutdown
+   vrf member slice0153
+   ip address 20.152.76.1/24
+  !
+interface Ethernet154/3
+   no shutdown
+   vrf member slice0154
+   ip address 20.153.76.1/24
+  !
+interface Ethernet155/3
+   no shutdown
+   vrf member slice0155
+   ip address 20.154.76.1/24
+  !
+interface Ethernet156/3
+   no shutdown
+   vrf member slice0156
+   ip address 20.155.76.1/24
+  !
+interface Ethernet157/3
+   no shutdown
+   vrf member slice0157
+   ip address 20.156.76.1/24
+  !
+interface Ethernet158/3
+   no shutdown
+   vrf member slice0158
+   ip address 20.157.76.1/24
+  !
+interface Ethernet159/3
+   no shutdown
+   vrf member slice0159
+   ip address 20.158.76.1/24
+  !
+interface Ethernet160/3
+   no shutdown
+   vrf member slice0160
+   ip address 20.159.76.1/24
+  !
+interface Ethernet161/3
+   no shutdown
+   vrf member slice0161
+   ip address 20.160.76.1/24
+  !
+interface Ethernet162/3
+   no shutdown
+   vrf member slice0162
+   ip address 20.161.76.1/24
+  !
+interface Ethernet163/3
+   no shutdown
+   vrf member slice0163
+   ip address 20.162.76.1/24
+  !
+interface Ethernet164/3
+   no shutdown
+   vrf member slice0164
+   ip address 20.163.76.1/24
+  !
+interface Ethernet165/3
+   no shutdown
+   vrf member slice0165
+   ip address 20.164.76.1/24
+  !
+interface Ethernet166/3
+   no shutdown
+   vrf member slice0166
+   ip address 20.165.76.1/24
+  !
+interface Ethernet167/3
+   no shutdown
+   vrf member slice0167
+   ip address 20.166.76.1/24
+  !
+interface Ethernet168/3
+   no shutdown
+   vrf member slice0168
+   ip address 20.167.76.1/24
+  !
+interface Ethernet169/3
+   no shutdown
+   vrf member slice0169
+   ip address 20.168.76.1/24
+  !
+interface Ethernet170/3
+   no shutdown
+   vrf member slice0170
+   ip address 20.169.76.1/24
+  !
+interface Ethernet171/3
+   no shutdown
+   vrf member slice0171
+   ip address 20.170.76.1/24
+  !
+interface Ethernet172/3
+   no shutdown
+   vrf member slice0172
+   ip address 20.171.76.1/24
+  !
+interface Ethernet173/3
+   no shutdown
+   vrf member slice0173
+   ip address 20.172.76.1/24
+  !
+interface Ethernet174/3
+   no shutdown
+   vrf member slice0174
+   ip address 20.173.76.1/24
+  !
+interface Ethernet175/3
+   no shutdown
+   vrf member slice0175
+   ip address 20.174.76.1/24
+  !
+interface Ethernet176/3
+   no shutdown
+   vrf member slice0176
+   ip address 20.175.76.1/24
+  !
+interface Ethernet177/3
+   no shutdown
+   vrf member slice0177
+   ip address 20.176.76.1/24
+  !
+interface Ethernet178/3
+   no shutdown
+   vrf member slice0178
+   ip address 20.177.76.1/24
+  !
+interface Ethernet179/3
+   no shutdown
+   vrf member slice0179
+   ip address 20.178.76.1/24
+  !
+interface Ethernet180/3
+   no shutdown
+   vrf member slice0180
+   ip address 20.179.76.1/24
+  !
+interface Ethernet181/3
+   no shutdown
+   vrf member slice0181
+   ip address 20.180.76.1/24
+  !
+interface Ethernet182/3
+   no shutdown
+   vrf member slice0182
+   ip address 20.181.76.1/24
+  !
+interface Ethernet183/3
+   no shutdown
+   vrf member slice0183
+   ip address 20.182.76.1/24
+  !
+interface Ethernet184/3
+   no shutdown
+   vrf member slice0184
+   ip address 20.183.76.1/24
+  !
+interface Ethernet185/3
+   no shutdown
+   vrf member slice0185
+   ip address 20.184.76.1/24
+  !
+interface Ethernet186/3
+   no shutdown
+   vrf member slice0186
+   ip address 20.185.76.1/24
+  !
+interface Ethernet187/3
+   no shutdown
+   vrf member slice0187
+   ip address 20.186.76.1/24
+  !
+interface Ethernet188/3
+   no shutdown
+   vrf member slice0188
+   ip address 20.187.76.1/24
+  !
+interface Ethernet189/3
+   no shutdown
+   vrf member slice0189
+   ip address 20.188.76.1/24
+  !
+interface Ethernet190/3
+   no shutdown
+   vrf member slice0190
+   ip address 20.189.76.1/24
+  !
+interface Ethernet191/3
+   no shutdown
+   vrf member slice0191
+   ip address 20.190.76.1/24
+  !
+interface Ethernet192/3
+   no shutdown
+   vrf member slice0192
+   ip address 20.191.76.1/24
+  !
+interface Ethernet193/3
+   no shutdown
+   vrf member slice0193
+   ip address 20.192.76.1/24
+  !
+interface Ethernet194/3
+   no shutdown
+   vrf member slice0194
+   ip address 20.193.76.1/24
+  !
+interface Ethernet195/3
+   no shutdown
+   vrf member slice0195
+   ip address 20.194.76.1/24
+  !
+interface Ethernet196/3
+   no shutdown
+   vrf member slice0196
+   ip address 20.195.76.1/24
+  !
+interface Ethernet197/3
+   no shutdown
+   vrf member slice0197
+   ip address 20.196.76.1/24
+  !
+interface Ethernet198/3
+   no shutdown
+   vrf member slice0198
+   ip address 20.197.76.1/24
+  !
+interface Ethernet199/3
+   no shutdown
+   vrf member slice0199
+   ip address 20.198.76.1/24
+  !
+interface Ethernet200/3
+   no shutdown
+   vrf member slice0200
+   ip address 20.199.76.1/24
+  !
+!
+interface nve 1
+    no shutdown
+    source-interface loopback0
+    host-reachability protocol bgp
+    member vni 1 associate-vrf
+    member vni 2 associate-vrf
+    member vni 3 associate-vrf
+    member vni 4 associate-vrf
+    member vni 5 associate-vrf
+    member vni 6 associate-vrf
+    member vni 7 associate-vrf
+    member vni 8 associate-vrf
+    member vni 9 associate-vrf
+    member vni 10 associate-vrf
+    member vni 11 associate-vrf
+    member vni 12 associate-vrf
+    member vni 13 associate-vrf
+    member vni 14 associate-vrf
+    member vni 15 associate-vrf
+    member vni 16 associate-vrf
+    member vni 17 associate-vrf
+    member vni 18 associate-vrf
+    member vni 19 associate-vrf
+    member vni 20 associate-vrf
+    member vni 21 associate-vrf
+    member vni 22 associate-vrf
+    member vni 23 associate-vrf
+    member vni 24 associate-vrf
+    member vni 25 associate-vrf
+    member vni 26 associate-vrf
+    member vni 27 associate-vrf
+    member vni 28 associate-vrf
+    member vni 29 associate-vrf
+    member vni 30 associate-vrf
+    member vni 31 associate-vrf
+    member vni 32 associate-vrf
+    member vni 33 associate-vrf
+    member vni 34 associate-vrf
+    member vni 35 associate-vrf
+    member vni 36 associate-vrf
+    member vni 37 associate-vrf
+    member vni 38 associate-vrf
+    member vni 39 associate-vrf
+    member vni 40 associate-vrf
+    member vni 41 associate-vrf
+    member vni 42 associate-vrf
+    member vni 43 associate-vrf
+    member vni 44 associate-vrf
+    member vni 45 associate-vrf
+    member vni 46 associate-vrf
+    member vni 47 associate-vrf
+    member vni 48 associate-vrf
+    member vni 49 associate-vrf
+    member vni 50 associate-vrf
+    member vni 51 associate-vrf
+    member vni 52 associate-vrf
+    member vni 53 associate-vrf
+    member vni 54 associate-vrf
+    member vni 55 associate-vrf
+    member vni 56 associate-vrf
+    member vni 57 associate-vrf
+    member vni 58 associate-vrf
+    member vni 59 associate-vrf
+    member vni 60 associate-vrf
+    member vni 61 associate-vrf
+    member vni 62 associate-vrf
+    member vni 63 associate-vrf
+    member vni 64 associate-vrf
+    member vni 65 associate-vrf
+    member vni 66 associate-vrf
+    member vni 67 associate-vrf
+    member vni 68 associate-vrf
+    member vni 69 associate-vrf
+    member vni 70 associate-vrf
+    member vni 71 associate-vrf
+    member vni 72 associate-vrf
+    member vni 73 associate-vrf
+    member vni 74 associate-vrf
+    member vni 75 associate-vrf
+    member vni 76 associate-vrf
+    member vni 77 associate-vrf
+    member vni 78 associate-vrf
+    member vni 79 associate-vrf
+    member vni 80 associate-vrf
+    member vni 81 associate-vrf
+    member vni 82 associate-vrf
+    member vni 83 associate-vrf
+    member vni 84 associate-vrf
+    member vni 85 associate-vrf
+    member vni 86 associate-vrf
+    member vni 87 associate-vrf
+    member vni 88 associate-vrf
+    member vni 89 associate-vrf
+    member vni 90 associate-vrf
+    member vni 91 associate-vrf
+    member vni 92 associate-vrf
+    member vni 93 associate-vrf
+    member vni 94 associate-vrf
+    member vni 95 associate-vrf
+    member vni 96 associate-vrf
+    member vni 97 associate-vrf
+    member vni 98 associate-vrf
+    member vni 99 associate-vrf
+    member vni 100 associate-vrf
+    member vni 101 associate-vrf
+    member vni 102 associate-vrf
+    member vni 103 associate-vrf
+    member vni 104 associate-vrf
+    member vni 105 associate-vrf
+    member vni 106 associate-vrf
+    member vni 107 associate-vrf
+    member vni 108 associate-vrf
+    member vni 109 associate-vrf
+    member vni 110 associate-vrf
+    member vni 111 associate-vrf
+    member vni 112 associate-vrf
+    member vni 113 associate-vrf
+    member vni 114 associate-vrf
+    member vni 115 associate-vrf
+    member vni 116 associate-vrf
+    member vni 117 associate-vrf
+    member vni 118 associate-vrf
+    member vni 119 associate-vrf
+    member vni 120 associate-vrf
+    member vni 121 associate-vrf
+    member vni 122 associate-vrf
+    member vni 123 associate-vrf
+    member vni 124 associate-vrf
+    member vni 125 associate-vrf
+    member vni 126 associate-vrf
+    member vni 127 associate-vrf
+    member vni 128 associate-vrf
+    member vni 129 associate-vrf
+    member vni 130 associate-vrf
+    member vni 131 associate-vrf
+    member vni 132 associate-vrf
+    member vni 133 associate-vrf
+    member vni 134 associate-vrf
+    member vni 135 associate-vrf
+    member vni 136 associate-vrf
+    member vni 137 associate-vrf
+    member vni 138 associate-vrf
+    member vni 139 associate-vrf
+    member vni 140 associate-vrf
+    member vni 141 associate-vrf
+    member vni 142 associate-vrf
+    member vni 143 associate-vrf
+    member vni 144 associate-vrf
+    member vni 145 associate-vrf
+    member vni 146 associate-vrf
+    member vni 147 associate-vrf
+    member vni 148 associate-vrf
+    member vni 149 associate-vrf
+    member vni 150 associate-vrf
+    member vni 151 associate-vrf
+    member vni 152 associate-vrf
+    member vni 153 associate-vrf
+    member vni 154 associate-vrf
+    member vni 155 associate-vrf
+    member vni 156 associate-vrf
+    member vni 157 associate-vrf
+    member vni 158 associate-vrf
+    member vni 159 associate-vrf
+    member vni 160 associate-vrf
+    member vni 161 associate-vrf
+    member vni 162 associate-vrf
+    member vni 163 associate-vrf
+    member vni 164 associate-vrf
+    member vni 165 associate-vrf
+    member vni 166 associate-vrf
+    member vni 167 associate-vrf
+    member vni 168 associate-vrf
+    member vni 169 associate-vrf
+    member vni 170 associate-vrf
+    member vni 171 associate-vrf
+    member vni 172 associate-vrf
+    member vni 173 associate-vrf
+    member vni 174 associate-vrf
+    member vni 175 associate-vrf
+    member vni 176 associate-vrf
+    member vni 177 associate-vrf
+    member vni 178 associate-vrf
+    member vni 179 associate-vrf
+    member vni 180 associate-vrf
+    member vni 181 associate-vrf
+    member vni 182 associate-vrf
+    member vni 183 associate-vrf
+    member vni 184 associate-vrf
+    member vni 185 associate-vrf
+    member vni 186 associate-vrf
+    member vni 187 associate-vrf
+    member vni 188 associate-vrf
+    member vni 189 associate-vrf
+    member vni 190 associate-vrf
+    member vni 191 associate-vrf
+    member vni 192 associate-vrf
+    member vni 193 associate-vrf
+    member vni 194 associate-vrf
+    member vni 195 associate-vrf
+    member vni 196 associate-vrf
+    member vni 197 associate-vrf
+    member vni 198 associate-vrf
+    member vni 199 associate-vrf
+    member vni 200 associate-vrf
+!
+!
+vlan 11
+    vn-segment 1
+vlan 12
+    vn-segment 2
+vlan 13
+    vn-segment 3
+vlan 14
+    vn-segment 4
+vlan 15
+    vn-segment 5
+vlan 16
+    vn-segment 6
+vlan 17
+    vn-segment 7
+vlan 18
+    vn-segment 8
+vlan 19
+    vn-segment 9
+vlan 20
+    vn-segment 10
+vlan 21
+    vn-segment 11
+vlan 22
+    vn-segment 12
+vlan 23
+    vn-segment 13
+vlan 24
+    vn-segment 14
+vlan 25
+    vn-segment 15
+vlan 26
+    vn-segment 16
+vlan 27
+    vn-segment 17
+vlan 28
+    vn-segment 18
+vlan 29
+    vn-segment 19
+vlan 30
+    vn-segment 20
+vlan 31
+    vn-segment 21
+vlan 32
+    vn-segment 22
+vlan 33
+    vn-segment 23
+vlan 34
+    vn-segment 24
+vlan 35
+    vn-segment 25
+vlan 36
+    vn-segment 26
+vlan 37
+    vn-segment 27
+vlan 38
+    vn-segment 28
+vlan 39
+    vn-segment 29
+vlan 40
+    vn-segment 30
+vlan 41
+    vn-segment 31
+vlan 42
+    vn-segment 32
+vlan 43
+    vn-segment 33
+vlan 44
+    vn-segment 34
+vlan 45
+    vn-segment 35
+vlan 46
+    vn-segment 36
+vlan 47
+    vn-segment 37
+vlan 48
+    vn-segment 38
+vlan 49
+    vn-segment 39
+vlan 50
+    vn-segment 40
+vlan 51
+    vn-segment 41
+vlan 52
+    vn-segment 42
+vlan 53
+    vn-segment 43
+vlan 54
+    vn-segment 44
+vlan 55
+    vn-segment 45
+vlan 56
+    vn-segment 46
+vlan 57
+    vn-segment 47
+vlan 58
+    vn-segment 48
+vlan 59
+    vn-segment 49
+vlan 60
+    vn-segment 50
+vlan 61
+    vn-segment 51
+vlan 62
+    vn-segment 52
+vlan 63
+    vn-segment 53
+vlan 64
+    vn-segment 54
+vlan 65
+    vn-segment 55
+vlan 66
+    vn-segment 56
+vlan 67
+    vn-segment 57
+vlan 68
+    vn-segment 58
+vlan 69
+    vn-segment 59
+vlan 70
+    vn-segment 60
+vlan 71
+    vn-segment 61
+vlan 72
+    vn-segment 62
+vlan 73
+    vn-segment 63
+vlan 74
+    vn-segment 64
+vlan 75
+    vn-segment 65
+vlan 76
+    vn-segment 66
+vlan 77
+    vn-segment 67
+vlan 78
+    vn-segment 68
+vlan 79
+    vn-segment 69
+vlan 80
+    vn-segment 70
+vlan 81
+    vn-segment 71
+vlan 82
+    vn-segment 72
+vlan 83
+    vn-segment 73
+vlan 84
+    vn-segment 74
+vlan 85
+    vn-segment 75
+vlan 86
+    vn-segment 76
+vlan 87
+    vn-segment 77
+vlan 88
+    vn-segment 78
+vlan 89
+    vn-segment 79
+vlan 90
+    vn-segment 80
+vlan 91
+    vn-segment 81
+vlan 92
+    vn-segment 82
+vlan 93
+    vn-segment 83
+vlan 94
+    vn-segment 84
+vlan 95
+    vn-segment 85
+vlan 96
+    vn-segment 86
+vlan 97
+    vn-segment 87
+vlan 98
+    vn-segment 88
+vlan 99
+    vn-segment 89
+vlan 100
+    vn-segment 90
+vlan 101
+    vn-segment 91
+vlan 102
+    vn-segment 92
+vlan 103
+    vn-segment 93
+vlan 104
+    vn-segment 94
+vlan 105
+    vn-segment 95
+vlan 106
+    vn-segment 96
+vlan 107
+    vn-segment 97
+vlan 108
+    vn-segment 98
+vlan 109
+    vn-segment 99
+vlan 110
+    vn-segment 100
+vlan 111
+    vn-segment 101
+vlan 112
+    vn-segment 102
+vlan 113
+    vn-segment 103
+vlan 114
+    vn-segment 104
+vlan 115
+    vn-segment 105
+vlan 116
+    vn-segment 106
+vlan 117
+    vn-segment 107
+vlan 118
+    vn-segment 108
+vlan 119
+    vn-segment 109
+vlan 120
+    vn-segment 110
+vlan 121
+    vn-segment 111
+vlan 122
+    vn-segment 112
+vlan 123
+    vn-segment 113
+vlan 124
+    vn-segment 114
+vlan 125
+    vn-segment 115
+vlan 126
+    vn-segment 116
+vlan 127
+    vn-segment 117
+vlan 128
+    vn-segment 118
+vlan 129
+    vn-segment 119
+vlan 130
+    vn-segment 120
+vlan 131
+    vn-segment 121
+vlan 132
+    vn-segment 122
+vlan 133
+    vn-segment 123
+vlan 134
+    vn-segment 124
+vlan 135
+    vn-segment 125
+vlan 136
+    vn-segment 126
+vlan 137
+    vn-segment 127
+vlan 138
+    vn-segment 128
+vlan 139
+    vn-segment 129
+vlan 140
+    vn-segment 130
+vlan 141
+    vn-segment 131
+vlan 142
+    vn-segment 132
+vlan 143
+    vn-segment 133
+vlan 144
+    vn-segment 134
+vlan 145
+    vn-segment 135
+vlan 146
+    vn-segment 136
+vlan 147
+    vn-segment 137
+vlan 148
+    vn-segment 138
+vlan 149
+    vn-segment 139
+vlan 150
+    vn-segment 140
+vlan 151
+    vn-segment 141
+vlan 152
+    vn-segment 142
+vlan 153
+    vn-segment 143
+vlan 154
+    vn-segment 144
+vlan 155
+    vn-segment 145
+vlan 156
+    vn-segment 146
+vlan 157
+    vn-segment 147
+vlan 158
+    vn-segment 148
+vlan 159
+    vn-segment 149
+vlan 160
+    vn-segment 150
+vlan 161
+    vn-segment 151
+vlan 162
+    vn-segment 152
+vlan 163
+    vn-segment 153
+vlan 164
+    vn-segment 154
+vlan 165
+    vn-segment 155
+vlan 166
+    vn-segment 156
+vlan 167
+    vn-segment 157
+vlan 168
+    vn-segment 158
+vlan 169
+    vn-segment 159
+vlan 170
+    vn-segment 160
+vlan 171
+    vn-segment 161
+vlan 172
+    vn-segment 162
+vlan 173
+    vn-segment 163
+vlan 174
+    vn-segment 164
+vlan 175
+    vn-segment 165
+vlan 176
+    vn-segment 166
+vlan 177
+    vn-segment 167
+vlan 178
+    vn-segment 168
+vlan 179
+    vn-segment 169
+vlan 180
+    vn-segment 170
+vlan 181
+    vn-segment 171
+vlan 182
+    vn-segment 172
+vlan 183
+    vn-segment 173
+vlan 184
+    vn-segment 174
+vlan 185
+    vn-segment 175
+vlan 186
+    vn-segment 176
+vlan 187
+    vn-segment 177
+vlan 188
+    vn-segment 178
+vlan 189
+    vn-segment 179
+vlan 190
+    vn-segment 180
+vlan 191
+    vn-segment 181
+vlan 192
+    vn-segment 182
+vlan 193
+    vn-segment 183
+vlan 194
+    vn-segment 184
+vlan 195
+    vn-segment 185
+vlan 196
+    vn-segment 186
+vlan 197
+    vn-segment 187
+vlan 198
+    vn-segment 188
+vlan 199
+    vn-segment 189
+vlan 200
+    vn-segment 190
+vlan 201
+    vn-segment 191
+vlan 202
+    vn-segment 192
+vlan 203
+    vn-segment 193
+vlan 204
+    vn-segment 194
+vlan 205
+    vn-segment 195
+vlan 206
+    vn-segment 196
+vlan 207
+    vn-segment 197
+vlan 208
+    vn-segment 198
+vlan 209
+    vn-segment 199
+vlan 210
+    vn-segment 200
+!
+!
+interface vlan 11
+   no shutdown
+   vrf member slice0001
+interface vlan 12
+   no shutdown
+   vrf member slice0002
+interface vlan 13
+   no shutdown
+   vrf member slice0003
+interface vlan 14
+   no shutdown
+   vrf member slice0004
+interface vlan 15
+   no shutdown
+   vrf member slice0005
+interface vlan 16
+   no shutdown
+   vrf member slice0006
+interface vlan 17
+   no shutdown
+   vrf member slice0007
+interface vlan 18
+   no shutdown
+   vrf member slice0008
+interface vlan 19
+   no shutdown
+   vrf member slice0009
+interface vlan 20
+   no shutdown
+   vrf member slice0010
+interface vlan 21
+   no shutdown
+   vrf member slice0011
+interface vlan 22
+   no shutdown
+   vrf member slice0012
+interface vlan 23
+   no shutdown
+   vrf member slice0013
+interface vlan 24
+   no shutdown
+   vrf member slice0014
+interface vlan 25
+   no shutdown
+   vrf member slice0015
+interface vlan 26
+   no shutdown
+   vrf member slice0016
+interface vlan 27
+   no shutdown
+   vrf member slice0017
+interface vlan 28
+   no shutdown
+   vrf member slice0018
+interface vlan 29
+   no shutdown
+   vrf member slice0019
+interface vlan 30
+   no shutdown
+   vrf member slice0020
+interface vlan 31
+   no shutdown
+   vrf member slice0021
+interface vlan 32
+   no shutdown
+   vrf member slice0022
+interface vlan 33
+   no shutdown
+   vrf member slice0023
+interface vlan 34
+   no shutdown
+   vrf member slice0024
+interface vlan 35
+   no shutdown
+   vrf member slice0025
+interface vlan 36
+   no shutdown
+   vrf member slice0026
+interface vlan 37
+   no shutdown
+   vrf member slice0027
+interface vlan 38
+   no shutdown
+   vrf member slice0028
+interface vlan 39
+   no shutdown
+   vrf member slice0029
+interface vlan 40
+   no shutdown
+   vrf member slice0030
+interface vlan 41
+   no shutdown
+   vrf member slice0031
+interface vlan 42
+   no shutdown
+   vrf member slice0032
+interface vlan 43
+   no shutdown
+   vrf member slice0033
+interface vlan 44
+   no shutdown
+   vrf member slice0034
+interface vlan 45
+   no shutdown
+   vrf member slice0035
+interface vlan 46
+   no shutdown
+   vrf member slice0036
+interface vlan 47
+   no shutdown
+   vrf member slice0037
+interface vlan 48
+   no shutdown
+   vrf member slice0038
+interface vlan 49
+   no shutdown
+   vrf member slice0039
+interface vlan 50
+   no shutdown
+   vrf member slice0040
+interface vlan 51
+   no shutdown
+   vrf member slice0041
+interface vlan 52
+   no shutdown
+   vrf member slice0042
+interface vlan 53
+   no shutdown
+   vrf member slice0043
+interface vlan 54
+   no shutdown
+   vrf member slice0044
+interface vlan 55
+   no shutdown
+   vrf member slice0045
+interface vlan 56
+   no shutdown
+   vrf member slice0046
+interface vlan 57
+   no shutdown
+   vrf member slice0047
+interface vlan 58
+   no shutdown
+   vrf member slice0048
+interface vlan 59
+   no shutdown
+   vrf member slice0049
+interface vlan 60
+   no shutdown
+   vrf member slice0050
+interface vlan 61
+   no shutdown
+   vrf member slice0051
+interface vlan 62
+   no shutdown
+   vrf member slice0052
+interface vlan 63
+   no shutdown
+   vrf member slice0053
+interface vlan 64
+   no shutdown
+   vrf member slice0054
+interface vlan 65
+   no shutdown
+   vrf member slice0055
+interface vlan 66
+   no shutdown
+   vrf member slice0056
+interface vlan 67
+   no shutdown
+   vrf member slice0057
+interface vlan 68
+   no shutdown
+   vrf member slice0058
+interface vlan 69
+   no shutdown
+   vrf member slice0059
+interface vlan 70
+   no shutdown
+   vrf member slice0060
+interface vlan 71
+   no shutdown
+   vrf member slice0061
+interface vlan 72
+   no shutdown
+   vrf member slice0062
+interface vlan 73
+   no shutdown
+   vrf member slice0063
+interface vlan 74
+   no shutdown
+   vrf member slice0064
+interface vlan 75
+   no shutdown
+   vrf member slice0065
+interface vlan 76
+   no shutdown
+   vrf member slice0066
+interface vlan 77
+   no shutdown
+   vrf member slice0067
+interface vlan 78
+   no shutdown
+   vrf member slice0068
+interface vlan 79
+   no shutdown
+   vrf member slice0069
+interface vlan 80
+   no shutdown
+   vrf member slice0070
+interface vlan 81
+   no shutdown
+   vrf member slice0071
+interface vlan 82
+   no shutdown
+   vrf member slice0072
+interface vlan 83
+   no shutdown
+   vrf member slice0073
+interface vlan 84
+   no shutdown
+   vrf member slice0074
+interface vlan 85
+   no shutdown
+   vrf member slice0075
+interface vlan 86
+   no shutdown
+   vrf member slice0076
+interface vlan 87
+   no shutdown
+   vrf member slice0077
+interface vlan 88
+   no shutdown
+   vrf member slice0078
+interface vlan 89
+   no shutdown
+   vrf member slice0079
+interface vlan 90
+   no shutdown
+   vrf member slice0080
+interface vlan 91
+   no shutdown
+   vrf member slice0081
+interface vlan 92
+   no shutdown
+   vrf member slice0082
+interface vlan 93
+   no shutdown
+   vrf member slice0083
+interface vlan 94
+   no shutdown
+   vrf member slice0084
+interface vlan 95
+   no shutdown
+   vrf member slice0085
+interface vlan 96
+   no shutdown
+   vrf member slice0086
+interface vlan 97
+   no shutdown
+   vrf member slice0087
+interface vlan 98
+   no shutdown
+   vrf member slice0088
+interface vlan 99
+   no shutdown
+   vrf member slice0089
+interface vlan 100
+   no shutdown
+   vrf member slice0090
+interface vlan 101
+   no shutdown
+   vrf member slice0091
+interface vlan 102
+   no shutdown
+   vrf member slice0092
+interface vlan 103
+   no shutdown
+   vrf member slice0093
+interface vlan 104
+   no shutdown
+   vrf member slice0094
+interface vlan 105
+   no shutdown
+   vrf member slice0095
+interface vlan 106
+   no shutdown
+   vrf member slice0096
+interface vlan 107
+   no shutdown
+   vrf member slice0097
+interface vlan 108
+   no shutdown
+   vrf member slice0098
+interface vlan 109
+   no shutdown
+   vrf member slice0099
+interface vlan 110
+   no shutdown
+   vrf member slice0100
+interface vlan 111
+   no shutdown
+   vrf member slice0101
+interface vlan 112
+   no shutdown
+   vrf member slice0102
+interface vlan 113
+   no shutdown
+   vrf member slice0103
+interface vlan 114
+   no shutdown
+   vrf member slice0104
+interface vlan 115
+   no shutdown
+   vrf member slice0105
+interface vlan 116
+   no shutdown
+   vrf member slice0106
+interface vlan 117
+   no shutdown
+   vrf member slice0107
+interface vlan 118
+   no shutdown
+   vrf member slice0108
+interface vlan 119
+   no shutdown
+   vrf member slice0109
+interface vlan 120
+   no shutdown
+   vrf member slice0110
+interface vlan 121
+   no shutdown
+   vrf member slice0111
+interface vlan 122
+   no shutdown
+   vrf member slice0112
+interface vlan 123
+   no shutdown
+   vrf member slice0113
+interface vlan 124
+   no shutdown
+   vrf member slice0114
+interface vlan 125
+   no shutdown
+   vrf member slice0115
+interface vlan 126
+   no shutdown
+   vrf member slice0116
+interface vlan 127
+   no shutdown
+   vrf member slice0117
+interface vlan 128
+   no shutdown
+   vrf member slice0118
+interface vlan 129
+   no shutdown
+   vrf member slice0119
+interface vlan 130
+   no shutdown
+   vrf member slice0120
+interface vlan 131
+   no shutdown
+   vrf member slice0121
+interface vlan 132
+   no shutdown
+   vrf member slice0122
+interface vlan 133
+   no shutdown
+   vrf member slice0123
+interface vlan 134
+   no shutdown
+   vrf member slice0124
+interface vlan 135
+   no shutdown
+   vrf member slice0125
+interface vlan 136
+   no shutdown
+   vrf member slice0126
+interface vlan 137
+   no shutdown
+   vrf member slice0127
+interface vlan 138
+   no shutdown
+   vrf member slice0128
+interface vlan 139
+   no shutdown
+   vrf member slice0129
+interface vlan 140
+   no shutdown
+   vrf member slice0130
+interface vlan 141
+   no shutdown
+   vrf member slice0131
+interface vlan 142
+   no shutdown
+   vrf member slice0132
+interface vlan 143
+   no shutdown
+   vrf member slice0133
+interface vlan 144
+   no shutdown
+   vrf member slice0134
+interface vlan 145
+   no shutdown
+   vrf member slice0135
+interface vlan 146
+   no shutdown
+   vrf member slice0136
+interface vlan 147
+   no shutdown
+   vrf member slice0137
+interface vlan 148
+   no shutdown
+   vrf member slice0138
+interface vlan 149
+   no shutdown
+   vrf member slice0139
+interface vlan 150
+   no shutdown
+   vrf member slice0140
+interface vlan 151
+   no shutdown
+   vrf member slice0141
+interface vlan 152
+   no shutdown
+   vrf member slice0142
+interface vlan 153
+   no shutdown
+   vrf member slice0143
+interface vlan 154
+   no shutdown
+   vrf member slice0144
+interface vlan 155
+   no shutdown
+   vrf member slice0145
+interface vlan 156
+   no shutdown
+   vrf member slice0146
+interface vlan 157
+   no shutdown
+   vrf member slice0147
+interface vlan 158
+   no shutdown
+   vrf member slice0148
+interface vlan 159
+   no shutdown
+   vrf member slice0149
+interface vlan 160
+   no shutdown
+   vrf member slice0150
+interface vlan 161
+   no shutdown
+   vrf member slice0151
+interface vlan 162
+   no shutdown
+   vrf member slice0152
+interface vlan 163
+   no shutdown
+   vrf member slice0153
+interface vlan 164
+   no shutdown
+   vrf member slice0154
+interface vlan 165
+   no shutdown
+   vrf member slice0155
+interface vlan 166
+   no shutdown
+   vrf member slice0156
+interface vlan 167
+   no shutdown
+   vrf member slice0157
+interface vlan 168
+   no shutdown
+   vrf member slice0158
+interface vlan 169
+   no shutdown
+   vrf member slice0159
+interface vlan 170
+   no shutdown
+   vrf member slice0160
+interface vlan 171
+   no shutdown
+   vrf member slice0161
+interface vlan 172
+   no shutdown
+   vrf member slice0162
+interface vlan 173
+   no shutdown
+   vrf member slice0163
+interface vlan 174
+   no shutdown
+   vrf member slice0164
+interface vlan 175
+   no shutdown
+   vrf member slice0165
+interface vlan 176
+   no shutdown
+   vrf member slice0166
+interface vlan 177
+   no shutdown
+   vrf member slice0167
+interface vlan 178
+   no shutdown
+   vrf member slice0168
+interface vlan 179
+   no shutdown
+   vrf member slice0169
+interface vlan 180
+   no shutdown
+   vrf member slice0170
+interface vlan 181
+   no shutdown
+   vrf member slice0171
+interface vlan 182
+   no shutdown
+   vrf member slice0172
+interface vlan 183
+   no shutdown
+   vrf member slice0173
+interface vlan 184
+   no shutdown
+   vrf member slice0174
+interface vlan 185
+   no shutdown
+   vrf member slice0175
+interface vlan 186
+   no shutdown
+   vrf member slice0176
+interface vlan 187
+   no shutdown
+   vrf member slice0177
+interface vlan 188
+   no shutdown
+   vrf member slice0178
+interface vlan 189
+   no shutdown
+   vrf member slice0179
+interface vlan 190
+   no shutdown
+   vrf member slice0180
+interface vlan 191
+   no shutdown
+   vrf member slice0181
+interface vlan 192
+   no shutdown
+   vrf member slice0182
+interface vlan 193
+   no shutdown
+   vrf member slice0183
+interface vlan 194
+   no shutdown
+   vrf member slice0184
+interface vlan 195
+   no shutdown
+   vrf member slice0185
+interface vlan 196
+   no shutdown
+   vrf member slice0186
+interface vlan 197
+   no shutdown
+   vrf member slice0187
+interface vlan 198
+   no shutdown
+   vrf member slice0188
+interface vlan 199
+   no shutdown
+   vrf member slice0189
+interface vlan 200
+   no shutdown
+   vrf member slice0190
+interface vlan 201
+   no shutdown
+   vrf member slice0191
+interface vlan 202
+   no shutdown
+   vrf member slice0192
+interface vlan 203
+   no shutdown
+   vrf member slice0193
+interface vlan 204
+   no shutdown
+   vrf member slice0194
+interface vlan 205
+   no shutdown
+   vrf member slice0195
+interface vlan 206
+   no shutdown
+   vrf member slice0196
+interface vlan 207
+   no shutdown
+   vrf member slice0197
+interface vlan 208
+   no shutdown
+   vrf member slice0198
+interface vlan 209
+   no shutdown
+   vrf member slice0199
+interface vlan 210
+   no shutdown
+   vrf member slice0200
+!

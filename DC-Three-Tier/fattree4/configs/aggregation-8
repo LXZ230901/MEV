@@ -1,0 +1,107 @@
+!
+!
+!
+hostname aggregation-8
+!
+feature bgp
+feature nv overlay
+feature vn-segment-vlan-based
+!
+router isis
+   is-type level-2
+   net 49.0008.1921.6800.0008.00
+!
+interface Ethernet1/2
+   no shutdown
+   ip address 70.0.8.0/24
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+    no shutdown
+    ip router isis
+    ip address 70.0.8.0/32
+!
+interface Ethernet0/1
+    no shutdown
+    ip router isis
+    ip address 10.0.17.1/31
+!
+interface Ethernet1/1
+    no shutdown
+    ip router isis
+    ip address 10.0.21.1/31
+!
+interface Ethernet2/1
+    no shutdown
+    ip router isis
+    ip address 10.0.4.0/31
+!
+interface Ethernet3/1
+    no shutdown
+    ip router isis
+    ip address 10.0.5.0/31
+!
+router bgp 8
+    router-id 70.0.8.0
+    cluster-id 70.0.8.0
+    address-family ipv4 unicast
+        neighbor 10.0.17.0
+           remote-as 0
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.0.21.0
+           remote-as 1
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.0.4.1
+           remote-as 10
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.0.5.1
+           remote-as 11
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended

@@ -1,0 +1,141 @@
+!
+!
+!
+hostname edge-4
+!
+feature bgp
+feature nv overlay
+feature vn-segment-vlan-based
+!
+router isis
+   is-type level-2
+   net 49.0004.1921.6800.0004.00
+!
+interface Ethernet1/2
+   no shutdown
+   ip address 70.0.4.0/24
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+    no shutdown
+    ip router isis
+    ip address 70.0.4.0/32
+!
+interface Ethernet0/1
+    no shutdown
+    ip router isis
+    ip address 10.0.1.1/31
+!
+interface Ethernet0
+    no shutdown
+    ip router isis
+    ip address 70.0.4.0/31
+!
+interface Ethernet1
+    no shutdown
+    ip router isis
+    ip address 70.0.4.2/31
+!
+router bgp 4
+    router-id 70.0.4.0
+    cluster-id 70.0.4.0
+    address-family ipv4 unicast
+       network 70.0.4.0/24
+        neighbor 10.0.1.0
+           remote-as 3
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        vrf slice0001
+           address-family ipv4 unicast
+              network 20.0.4.0/24
+              advertise l2vpn evpn
+           !
+        vrf slice0002
+           address-family ipv4 unicast
+              network 20.1.4.0/24
+              advertise l2vpn evpn
+           !
+vrf context slice0001
+    vni 1
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:1 evpn
+        route-target export 100:1 evpn
+!
+vrf context slice0002
+    vni 2
+    rd auto
+    address-family ipv4 unicast
+        route-target import 100:2 evpn
+        route-target export 100:2 evpn
+!
+interface Ethernet1/3
+   no shutdown
+   vrf member slice0001
+   ip address 20.0.4.1/24
+  !
+interface Ethernet2/3
+   no shutdown
+   vrf member slice0002
+   ip address 20.1.4.1/24
+  !
+!
+interface nve 1
+    no shutdown
+    source-interface loopback0
+    host-reachability protocol bgp
+    member vni 1 associate-vrf
+    member vni 2 associate-vrf
+!
+!
+vlan 11
+    vn-segment 1
+vlan 12
+    vn-segment 2
+!
+!
+interface vlan 11
+   no shutdown
+   vrf member slice0001
+interface vlan 12
+   no shutdown
+   vrf member slice0002
+!
