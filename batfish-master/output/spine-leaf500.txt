@@ -1,0 +1,124 @@
+Loading: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //projects/allinone:allinone_main (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //projects/allinone:allinone_main (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //projects/allinone:allinone_main up-to-date:
+  bazel-bin/projects/allinone/allinone_main.jar
+  bazel-bin/projects/allinone/allinone_main
+INFO: Elapsed time: 0.132s, Critical Path: 0.00s
+INFO: 1 process: 1 internal.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/projects/allinone/allinone_main -runmode batch -cmdfile /home/liuxz/MEV/batfish-master/command/spine-leaf500
+Init'ed and set active network
+Uploaded snapshot.
+Parsing now.
+{"answerElements":[{"class":"org.batfish.datamodel.answers.InitInfoAnswerElement","parseStatus":{"configs/leaf-1.cfg":"PASSED","configs/leaf-10.cfg":"PASSED","configs/leaf-100.cfg":"PASSED","configs/leaf-101.cfg":"PASSED","configs/leaf-102.cfg":"PASSED","configs/leaf-103.cfg":"PASSED","configs/leaf-104.cfg":"PASSED","configs/leaf-105.cfg":"PASSED","configs/leaf-106.cfg":"PASSED","configs/leaf-107.cfg":"PASSED","configs/leaf-108.cfg":"PASSED","configs/leaf-109.cfg":"PASSED","configs/leaf-11.cfg":"PASSED","configs/leaf-110.cfg":"PASSED","configs/leaf-111.cfg":"PASSED","configs/leaf-112.cfg":"PASSED","configs/leaf-113.cfg":"PASSED","configs/leaf-114.cfg":"PASSED","configs/leaf-115.cfg":"PASSED","configs/leaf-116.cfg":"PASSED","configs/leaf-117.cfg":"PASSED","configs/leaf-118.cfg":"PASSED","configs/leaf-119.cfg":"PASSED","configs/leaf-12.cfg":"PASSED","configs/leaf-120.cfg":"PASSED","configs/leaf-121.cfg":"PASSED","configs/leaf-122.cfg":"PASSED","configs/leaf-123.cfg":"PASSED","configs/leaf-124.cfg":"PASSED","configs/leaf-125.cfg":"PASSED","configs/leaf-126.cfg":"PASSED","configs/leaf-127.cfg":"PASSED","configs/leaf-128.cfg":"PASSED","configs/leaf-129.cfg":"PASSED","configs/leaf-13.cfg":"PASSED","configs/leaf-130.cfg":"PASSED","configs/leaf-131.cfg":"PASSED","configs/leaf-132.cfg":"PASSED","configs/leaf-133.cfg":"PASSED","configs/leaf-134.cfg":"PASSED","configs/leaf-135.cfg":"PASSED","configs/leaf-136.cfg":"PASSED","configs/leaf-137.cfg":"PASSED","configs/leaf-138.cfg":"PASSED","configs/leaf-139.cfg":"PASSED","configs/leaf-14.cfg":"PASSED","configs/leaf-140.cfg":"PASSED","configs/leaf-141.cfg":"PASSED","configs/leaf-142.cfg":"PASSED","configs/leaf-143.cfg":"PASSED","configs/leaf-144.cfg":"PASSED","configs/leaf-145.cfg":"PASSED","configs/leaf-146.cfg":"PASSED","configs/leaf-147.cfg":"PASSED","configs/leaf-148.cfg":"PASSED","configs/leaf-149.cfg":"PASSED","configs/leaf-15.cfg":"PASSED","configs/leaf-150.cfg":"PASSED","configs/leaf-151.cfg":"PASSED","configs/leaf-152.cfg":"PASSED","configs/leaf-153.cfg":"PASSED","configs/leaf-154.cfg":"PASSED","configs/leaf-155.cfg":"PASSED","configs/leaf-156.cfg":"PASSED","configs/leaf-157.cfg":"PASSED","configs/leaf-158.cfg":"PASSED","configs/leaf-159.cfg":"PASSED","configs/leaf-16.cfg":"PASSED","configs/leaf-160.cfg":"PASSED","configs/leaf-161.cfg":"PASSED","configs/leaf-162.cfg":"PASSED","configs/leaf-163.cfg":"PASSED","configs/leaf-164.cfg":"PASSED","configs/leaf-165.cfg":"PASSED","configs/leaf-166.cfg":"PASSED","configs/leaf-167.cfg":"PASSED","configs/leaf-168.cfg":"PASSED","configs/leaf-169.cfg":"PASSED","configs/leaf-17.cfg":"PASSED","configs/leaf-170.cfg":"PASSED","configs/leaf-171.cfg":"PASSED","configs/leaf-172.cfg":"PASSED","configs/leaf-173.cfg":"PASSED","configs/leaf-174.cfg":"PASSED","configs/leaf-175.cfg":"PASSED","configs/leaf-176.cfg":"PASSED","configs/leaf-177.cfg":"PASSED","configs/leaf-178.cfg":"PASSED","configs/leaf-179.cfg":"PASSED","configs/leaf-18.cfg":"PASSED","configs/leaf-180.cfg":"PASSED","configs/leaf-181.cfg":"PASSED","configs/leaf-182.cfg":"PASSED","configs/leaf-183.cfg":"PASSED","configs/leaf-184.cfg":"PASSED","configs/leaf-185.cfg":"PASSED","configs/leaf-186.cfg":"PASSED","configs/leaf-187.cfg":"PASSED","configs/leaf-188.cfg":"PASSED","configs/leaf-189.cfg":"PASSED","configs/leaf-19.cfg":"PASSED","configs/leaf-190.cfg":"PASSED","configs/leaf-191.cfg":"PASSED","configs/leaf-192.cfg":"PASSED","configs/leaf-193.cfg":"PASSED","configs/leaf-194.cfg":"PASSED","configs/leaf-195.cfg":"PASSED","configs/leaf-196.cfg":"PASSED","configs/leaf-197.cfg":"PASSED","configs/leaf-198.cfg":"PASSED","configs/leaf-199.cfg":"PASSED","configs/leaf-2.cfg":"PASSED","configs/leaf-20.cfg":"PASSED","configs/leaf-200.cfg":"PASSED","configs/leaf-201.cfg":"PASSED","configs/leaf-202.cfg":"PASSED","configs/leaf-203.cfg":"PASSED","configs/leaf-204.cfg":"PASSED","configs/leaf-205.cfg":"PASSED","configs/leaf-206.cfg":"PASSED","configs/leaf-207.cfg":"PASSED","configs/leaf-208.cfg":"PASSED","configs/leaf-209.cfg":"PASSED","configs/leaf-21.cfg":"PASSED","configs/leaf-210.cfg":"PASSED","configs/leaf-211.cfg":"PASSED","configs/leaf-212.cfg":"PASSED","configs/leaf-213.cfg":"PASSED","configs/leaf-214.cfg":"PASSED","configs/leaf-215.cfg":"PASSED","configs/leaf-216.cfg":"PASSED","configs/leaf-217.cfg":"PASSED","configs/leaf-218.cfg":"PASSED","configs/leaf-219.cfg":"PASSED","configs/leaf-22.cfg":"PASSED","configs/leaf-220.cfg":"PASSED","configs/leaf-221.cfg":"PASSED","configs/leaf-222.cfg":"PASSED","configs/leaf-223.cfg":"PASSED","configs/leaf-224.cfg":"PASSED","configs/leaf-225.cfg":"PASSED","configs/leaf-226.cfg":"PASSED","configs/leaf-227.cfg":"PASSED","configs/leaf-228.cfg":"PASSED","configs/leaf-229.cfg":"PASSED","configs/leaf-23.cfg":"PASSED","configs/leaf-230.cfg":"PASSED","configs/leaf-231.cfg":"PASSED","configs/leaf-232.cfg":"PASSED","configs/leaf-233.cfg":"PASSED","configs/leaf-234.cfg":"PASSED","configs/leaf-235.cfg":"PASSED","configs/leaf-236.cfg":"PASSED","configs/leaf-237.cfg":"PASSED","configs/leaf-238.cfg":"PASSED","configs/leaf-239.cfg":"PASSED","configs/leaf-24.cfg":"PASSED","configs/leaf-240.cfg":"PASSED","configs/leaf-241.cfg":"PASSED","configs/leaf-242.cfg":"PASSED","configs/leaf-243.cfg":"PASSED","configs/leaf-244.cfg":"PASSED","configs/leaf-245.cfg":"PASSED","configs/leaf-246.cfg":"PASSED","configs/leaf-247.cfg":"PASSED","configs/leaf-248.cfg":"PASSED","configs/leaf-249.cfg":"PASSED","configs/leaf-25.cfg":"PASSED","configs/leaf-250.cfg":"PASSED","configs/leaf-251.cfg":"PASSED","configs/leaf-252.cfg":"PASSED","configs/leaf-253.cfg":"PASSED","configs/leaf-254.cfg":"PASSED","configs/leaf-255.cfg":"PASSED","configs/leaf-256.cfg":"PASSED","configs/leaf-257.cfg":"PASSED","configs/leaf-258.cfg":"PASSED","configs/leaf-259.cfg":"PASSED","configs/leaf-26.cfg":"PASSED","configs/leaf-260.cfg":"PASSED","configs/leaf-261.cfg":"PASSED","configs/leaf-262.cfg":"PASSED","configs/leaf-263.cfg":"PASSED","configs/leaf-264.cfg":"PASSED","configs/leaf-265.cfg":"PASSED","configs/leaf-266.cfg":"PASSED","configs/leaf-267.cfg":"PASSED","configs/leaf-268.cfg":"PASSED","configs/leaf-269.cfg":"PASSED","configs/leaf-27.cfg":"PASSED","configs/leaf-270.cfg":"PASSED","configs/leaf-271.cfg":"PASSED","configs/leaf-272.cfg":"PASSED","configs/leaf-273.cfg":"PASSED","configs/leaf-274.cfg":"PASSED","configs/leaf-275.cfg":"PASSED","configs/leaf-276.cfg":"PASSED","configs/leaf-277.cfg":"PASSED","configs/leaf-278.cfg":"PASSED","configs/leaf-279.cfg":"PASSED","configs/leaf-28.cfg":"PASSED","configs/leaf-280.cfg":"PASSED","configs/leaf-281.cfg":"PASSED","configs/leaf-282.cfg":"PASSED","configs/leaf-283.cfg":"PASSED","configs/leaf-284.cfg":"PASSED","configs/leaf-285.cfg":"PASSED","configs/leaf-286.cfg":"PASSED","configs/leaf-287.cfg":"PASSED","configs/leaf-288.cfg":"PASSED","configs/leaf-289.cfg":"PASSED","configs/leaf-29.cfg":"PASSED","configs/leaf-290.cfg":"PASSED","configs/leaf-291.cfg":"PASSED","configs/leaf-292.cfg":"PASSED","configs/leaf-293.cfg":"PASSED","configs/leaf-294.cfg":"PASSED","configs/leaf-295.cfg":"PASSED","configs/leaf-296.cfg":"PASSED","configs/leaf-297.cfg":"PASSED","configs/leaf-298.cfg":"PASSED","configs/leaf-299.cfg":"PASSED","configs/leaf-3.cfg":"PASSED","configs/leaf-30.cfg":"PASSED","configs/leaf-300.cfg":"PASSED","configs/leaf-301.cfg":"PASSED","configs/leaf-302.cfg":"PASSED","configs/leaf-303.cfg":"PASSED","configs/leaf-304.cfg":"PASSED","configs/leaf-305.cfg":"PASSED","configs/leaf-306.cfg":"PASSED","configs/leaf-307.cfg":"PASSED","configs/leaf-308.cfg":"PASSED","configs/leaf-309.cfg":"PASSED","configs/leaf-31.cfg":"PASSED","configs/leaf-310.cfg":"PASSED","configs/leaf-311.cfg":"PASSED","configs/leaf-312.cfg":"PASSED","configs/leaf-313.cfg":"PASSED","configs/leaf-314.cfg":"PASSED","configs/leaf-315.cfg":"PASSED","configs/leaf-316.cfg":"PASSED","configs/leaf-317.cfg":"PASSED","configs/leaf-318.cfg":"PASSED","configs/leaf-319.cfg":"PASSED","configs/leaf-32.cfg":"PASSED","configs/leaf-320.cfg":"PASSED","configs/leaf-321.cfg":"PASSED","configs/leaf-322.cfg":"PASSED","configs/leaf-323.cfg":"PASSED","configs/leaf-324.cfg":"PASSED","configs/leaf-325.cfg":"PASSED","configs/leaf-326.cfg":"PASSED","configs/leaf-327.cfg":"PASSED","configs/leaf-328.cfg":"PASSED","configs/leaf-329.cfg":"PASSED","configs/leaf-33.cfg":"PASSED","configs/leaf-330.cfg":"PASSED","configs/leaf-331.cfg":"PASSED","configs/leaf-332.cfg":"PASSED","configs/leaf-333.cfg":"PASSED","configs/leaf-334.cfg":"PASSED","configs/leaf-335.cfg":"PASSED","configs/leaf-336.cfg":"PASSED","configs/leaf-337.cfg":"PASSED","configs/leaf-338.cfg":"PASSED","configs/leaf-339.cfg":"PASSED","configs/leaf-34.cfg":"PASSED","configs/leaf-340.cfg":"PASSED","configs/leaf-341.cfg":"PASSED","configs/leaf-342.cfg":"PASSED","configs/leaf-343.cfg":"PASSED","configs/leaf-344.cfg":"PASSED","configs/leaf-345.cfg":"PASSED","configs/leaf-346.cfg":"PASSED","configs/leaf-347.cfg":"PASSED","configs/leaf-348.cfg":"PASSED","configs/leaf-349.cfg":"PASSED","configs/leaf-35.cfg":"PASSED","configs/leaf-350.cfg":"PASSED","configs/leaf-351.cfg":"PASSED","configs/leaf-352.cfg":"PASSED","configs/leaf-353.cfg":"PASSED","configs/leaf-354.cfg":"PASSED","configs/leaf-355.cfg":"PASSED","configs/leaf-356.cfg":"PASSED","configs/leaf-357.cfg":"PASSED","configs/leaf-358.cfg":"PASSED","configs/leaf-359.cfg":"PASSED","configs/leaf-36.cfg":"PASSED","configs/leaf-360.cfg":"PASSED","configs/leaf-361.cfg":"PASSED","configs/leaf-362.cfg":"PASSED","configs/leaf-363.cfg":"PASSED","configs/leaf-364.cfg":"PASSED","configs/leaf-365.cfg":"PASSED","configs/leaf-366.cfg":"PASSED","configs/leaf-367.cfg":"PASSED","configs/leaf-368.cfg":"PASSED","configs/leaf-369.cfg":"PASSED","configs/leaf-37.cfg":"PASSED","configs/leaf-370.cfg":"PASSED","configs/leaf-371.cfg":"PASSED","configs/leaf-372.cfg":"PASSED","configs/leaf-373.cfg":"PASSED","configs/leaf-374.cfg":"PASSED","configs/leaf-375.cfg":"PASSED","configs/leaf-376.cfg":"PASSED","configs/leaf-377.cfg":"PASSED","configs/leaf-378.cfg":"PASSED","configs/leaf-379.cfg":"PASSED","configs/leaf-38.cfg":"PASSED","configs/leaf-380.cfg":"PASSED","configs/leaf-381.cfg":"PASSED","configs/leaf-382.cfg":"PASSED","configs/leaf-383.cfg":"PASSED","configs/leaf-384.cfg":"PASSED","configs/leaf-385.cfg":"PASSED","configs/leaf-386.cfg":"PASSED","configs/leaf-387.cfg":"PASSED","configs/leaf-388.cfg":"PASSED","configs/leaf-389.cfg":"PASSED","configs/leaf-39.cfg":"PASSED","configs/leaf-390.cfg":"PASSED","configs/leaf-391.cfg":"PASSED","configs/leaf-392.cfg":"PASSED","configs/leaf-393.cfg":"PASSED","configs/leaf-394.cfg":"PASSED","configs/leaf-395.cfg":"PASSED","configs/leaf-396.cfg":"PASSED","configs/leaf-397.cfg":"PASSED","configs/leaf-398.cfg":"PASSED","configs/leaf-399.cfg":"PASSED","configs/leaf-4.cfg":"PASSED","configs/leaf-40.cfg":"PASSED","configs/leaf-400.cfg":"PASSED","configs/leaf-401.cfg":"PASSED","configs/leaf-402.cfg":"PASSED","configs/leaf-403.cfg":"PASSED","configs/leaf-404.cfg":"PASSED","configs/leaf-405.cfg":"PASSED","configs/leaf-406.cfg":"PASSED","configs/leaf-407.cfg":"PASSED","configs/leaf-408.cfg":"PASSED","configs/leaf-409.cfg":"PASSED","configs/leaf-41.cfg":"PASSED","configs/leaf-410.cfg":"PASSED","configs/leaf-411.cfg":"PASSED","configs/leaf-412.cfg":"PASSED","configs/leaf-413.cfg":"PASSED","configs/leaf-414.cfg":"PASSED","configs/leaf-415.cfg":"PASSED","configs/leaf-416.cfg":"PASSED","configs/leaf-417.cfg":"PASSED","configs/leaf-418.cfg":"PASSED","configs/leaf-419.cfg":"PASSED","configs/leaf-42.cfg":"PASSED","configs/leaf-420.cfg":"PASSED","configs/leaf-421.cfg":"PASSED","configs/leaf-422.cfg":"PASSED","configs/leaf-423.cfg":"PASSED","configs/leaf-424.cfg":"PASSED","configs/leaf-425.cfg":"PASSED","configs/leaf-426.cfg":"PASSED","configs/leaf-427.cfg":"PASSED","configs/leaf-428.cfg":"PASSED","configs/leaf-429.cfg":"PASSED","configs/leaf-43.cfg":"PASSED","configs/leaf-430.cfg":"PASSED","configs/leaf-431.cfg":"PASSED","configs/leaf-432.cfg":"PASSED","configs/leaf-433.cfg":"PASSED","configs/leaf-434.cfg":"PASSED","configs/leaf-435.cfg":"PASSED","configs/leaf-436.cfg":"PASSED","configs/leaf-437.cfg":"PASSED","configs/leaf-438.cfg":"PASSED","configs/leaf-439.cfg":"PASSED","configs/leaf-44.cfg":"PASSED","configs/leaf-440.cfg":"PASSED","configs/leaf-441.cfg":"PASSED","configs/leaf-442.cfg":"PASSED","configs/leaf-443.cfg":"PASSED","configs/leaf-444.cfg":"PASSED","configs/leaf-445.cfg":"PASSED","configs/leaf-446.cfg":"PASSED","configs/leaf-447.cfg":"PASSED","configs/leaf-448.cfg":"PASSED","configs/leaf-449.cfg":"PASSED","configs/leaf-45.cfg":"PASSED","configs/leaf-450.cfg":"PASSED","configs/leaf-451.cfg":"PASSED","configs/leaf-452.cfg":"PASSED","configs/leaf-453.cfg":"PASSED","configs/leaf-454.cfg":"PASSED","configs/leaf-455.cfg":"PASSED","configs/leaf-456.cfg":"PASSED","configs/leaf-457.cfg":"PASSED","configs/leaf-458.cfg":"PASSED","configs/leaf-459.cfg":"PASSED","configs/leaf-46.cfg":"PASSED","configs/leaf-460.cfg":"PASSED","configs/leaf-461.cfg":"PASSED","configs/leaf-462.cfg":"PASSED","configs/leaf-463.cfg":"PASSED","configs/leaf-464.cfg":"PASSED","configs/leaf-465.cfg":"PASSED","configs/leaf-466.cfg":"PASSED","configs/leaf-467.cfg":"PASSED","configs/leaf-468.cfg":"PASSED","configs/leaf-469.cfg":"PASSED","configs/leaf-47.cfg":"PASSED","configs/leaf-470.cfg":"PASSED","configs/leaf-471.cfg":"PASSED","configs/leaf-472.cfg":"PASSED","configs/leaf-473.cfg":"PASSED","configs/leaf-474.cfg":"PASSED","configs/leaf-475.cfg":"PASSED","configs/leaf-476.cfg":"PASSED","configs/leaf-477.cfg":"PASSED","configs/leaf-478.cfg":"PASSED","configs/leaf-479.cfg":"PASSED","configs/leaf-48.cfg":"PASSED","configs/leaf-480.cfg":"PASSED","configs/leaf-481.cfg":"PASSED","configs/leaf-482.cfg":"PASSED","configs/leaf-483.cfg":"PASSED","configs/leaf-484.cfg":"PASSED","configs/leaf-485.cfg":"PASSED","configs/leaf-486.cfg":"PASSED","configs/leaf-487.cfg":"PASSED","configs/leaf-488.cfg":"PASSED","configs/leaf-489.cfg":"PASSED","configs/leaf-49.cfg":"PASSED","configs/leaf-490.cfg":"PASSED","configs/leaf-491.cfg":"PASSED","configs/leaf-492.cfg":"PASSED","configs/leaf-493.cfg":"PASSED","configs/leaf-494.cfg":"PASSED","configs/leaf-495.cfg":"PASSED","configs/leaf-496.cfg":"PASSED","configs/leaf-497.cfg":"PASSED","configs/leaf-498.cfg":"PASSED","configs/leaf-499.cfg":"PASSED","configs/leaf-5.cfg":"PASSED","configs/leaf-50.cfg":"PASSED","configs/leaf-500.cfg":"PASSED","configs/leaf-51.cfg":"PASSED","configs/leaf-52.cfg":"PASSED","configs/leaf-53.cfg":"PASSED","configs/leaf-54.cfg":"PASSED","configs/leaf-55.cfg":"PASSED","configs/leaf-56.cfg":"PASSED","configs/leaf-57.cfg":"PASSED","configs/leaf-58.cfg":"PASSED","configs/leaf-59.cfg":"PASSED","configs/leaf-6.cfg":"PASSED","configs/leaf-60.cfg":"PASSED","configs/leaf-61.cfg":"PASSED","configs/leaf-62.cfg":"PASSED","configs/leaf-63.cfg":"PASSED","configs/leaf-64.cfg":"PASSED","configs/leaf-65.cfg":"PASSED","configs/leaf-66.cfg":"PASSED","configs/leaf-67.cfg":"PASSED","configs/leaf-68.cfg":"PASSED","configs/leaf-69.cfg":"PASSED","configs/leaf-7.cfg":"PASSED","configs/leaf-70.cfg":"PASSED","configs/leaf-71.cfg":"PASSED","configs/leaf-72.cfg":"PASSED","configs/leaf-73.cfg":"PASSED","configs/leaf-74.cfg":"PASSED","configs/leaf-75.cfg":"PASSED","configs/leaf-76.cfg":"PASSED","configs/leaf-77.cfg":"PASSED","configs/leaf-78.cfg":"PASSED","configs/leaf-79.cfg":"PASSED","configs/leaf-8.cfg":"PASSED","configs/leaf-80.cfg":"PASSED","configs/leaf-81.cfg":"PASSED","configs/leaf-82.cfg":"PASSED","configs/leaf-83.cfg":"PASSED","configs/leaf-84.cfg":"PASSED","configs/leaf-85.cfg":"PASSED","configs/leaf-86.cfg":"PASSED","configs/leaf-87.cfg":"PASSED","configs/leaf-88.cfg":"PASSED","configs/leaf-89.cfg":"PASSED","configs/leaf-9.cfg":"PASSED","configs/leaf-90.cfg":"PASSED","configs/leaf-91.cfg":"PASSED","configs/leaf-92.cfg":"PASSED","configs/leaf-93.cfg":"PASSED","configs/leaf-94.cfg":"PASSED","configs/leaf-95.cfg":"PASSED","configs/leaf-96.cfg":"PASSED","configs/leaf-97.cfg":"PASSED","configs/leaf-98.cfg":"PASSED","configs/leaf-99.cfg":"PASSED","configs/spine-1.cfg":"PASSED","configs/spine-2.cfg":"PASSED"}}],"status":"SUCCESS","summary":{"numFailed":0,"numPassed":0,"numResults":0}}Hash Code: 29
+Hash Code: -60
+model-constructor-time:2580
+converaged!
+ISIS-time:1
+BGP-time:4395
+EVPNL3VPN-time:159935
+simulation-time:164331
+verification-property-num:9980000
+FIB-Generation-time:51651
+reachability-verification-time:4812947
+increment-simulation-time:19
+incrementPDGNode-number:0
+child-node-number:0
+PDGUpdateTime:0
+Incremental-verification-time:0
+verification-property-num:21004
+increment-verification-time:1269
+Coveraged!
+21:59:23.785 [Thread-5] ERROR org.batfish.common.BatfishLogger - Exception in container:6ede6164-e08d-4bef-9627-8d76d30f1c44, testrig:1fd8f2d5-c0a6-40fb-bbf0-a49bcccfcf6c; exception:java.lang.NullPointerException
+	at org.batfish.datamodel.routing_policy.expr.MatchPrefixSet.evaluate(MatchPrefixSet.java:53)
+	at org.batfish.datamodel.routing_policy.statement.If.execute(If.java:111)
+	at org.batfish.datamodel.routing_policy.RoutingPolicy.call(RoutingPolicy.java:123)
+	at org.batfish.datamodel.routing_policy.RoutingPolicy.process(RoutingPolicy.java:315)
+	at org.batfish.datamodel.routing_policy.RoutingPolicy.processBgpRoute(RoutingPolicy.java:292)
+	at org.batfish.datamodel.routing_policy.RoutingPolicy.processReadOnly(RoutingPolicy.java:202)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.lambda$computeResolutionRestriction$1(Rib.java:74)
+	at java.base/java.util.HashMap.computeIfAbsent(HashMap.java:1134)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.lambda$new$0(Rib.java:55)
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90)
+	at java.base/java.util.Spliterators$IteratorSpliterator.tryAdvance(Spliterators.java:1812)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:528)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.postProcessDelta(Rib.java:125)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.processSideEffects(Rib.java:187)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.mergeRouteGetDelta(Rib.java:85)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.access$800(Rib.java:37)
+	at org.batfish.dataplane.rib.Rib.mergeRouteGetDelta(Rib.java:399)
+	at org.batfish.dataplane.rib.Rib.mergeRouteGetDelta(Rib.java:33)
+	at org.batfish.dataplane.rib.AbstractRib.lambda$importRib$2(AbstractRib.java:109)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.batfish.dataplane.rib.AbstractRib.importRib(AbstractRib.java:106)
+	at org.batfish.dataplane.ibdp.VirtualRouter.initForIgpComputation(VirtualRouter.java:305)
+	at org.batfish.dataplane.ibdp.IncrementalBdpEngine.lambda$computeIgpDataPlane$19(IncrementalBdpEngine.java:1827)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.ForEachOps$ForEachTask.compute(ForEachOps.java:290)
+	at java.base/java.util.concurrent.CountedCompleter.exec(CountedCompleter.java:746)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinTask.doInvoke(ForkJoinTask.java:408)
+	at java.base/java.util.concurrent.ForkJoinTask.invoke(ForkJoinTask.java:736)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateParallel(ForEachOps.java:159)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateParallel(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:233)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:661)
+	at org.batfish.dataplane.ibdp.IncrementalBdpEngine.computeIgpDataPlane(IncrementalBdpEngine.java:1827)
+	at org.batfish.dataplane.ibdp.IncrementalBdpEngine.computeDataPlane(IncrementalBdpEngine.java:1344)
+	at org.batfish.dataplane.ibdp.IncrementalDataPlanePlugin.computeDataPlane(IncrementalDataPlanePlugin.java:93)
+	at org.batfish.main.Batfish.computeDataPlane(Batfish.java:716)
+	at org.batfish.main.Batfish.run(Batfish.java:2063)
+	at org.batfish.main.Driver.lambda$runBatfish$0(Driver.java:155)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+21:59:23.885 [pool-3-thread-1] ERROR org.batfish.common.BatfishLogger - exception: org.batfish.common.BatfishException: Cannot queue dataplane dependent work for 1fd8f2d5-c0a6-40fb-bbf0-a49bcccfcf6c: Status is DATAPLANING_FAIL but no incomplete dataplaning work exists
+	at org.batfish.coordinator.WorkQueueMgr.getBlockerForDataplaneDependentWork(WorkQueueMgr.java:186)
+	at org.batfish.coordinator.WorkQueueMgr.queueDependentAnsweringWork(WorkQueueMgr.java:545)
+	at org.batfish.coordinator.WorkQueueMgr.queueUnassignedWork(WorkQueueMgr.java:658)
+	at org.batfish.coordinator.WorkQueueMgr.processTaskCheckResult(WorkQueueMgr.java:460)
+	at org.batfish.coordinator.WorkMgr.checkTasks(WorkMgr.java:269)
+	at org.batfish.coordinator.WorkMgr.access$000(WorkMgr.java:130)
+	at org.batfish.coordinator.WorkMgr$AssignWorkTask.run(WorkMgr.java:181)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+exception: org.batfish.common.BatfishException: Cannot queue dataplane dependent work for 1fd8f2d5-c0a6-40fb-bbf0-a49bcccfcf6c: Status is DATAPLANING_FAIL but no incomplete dataplaning work exists
+	at org.batfish.coordinator.WorkQueueMgr.getBlockerForDataplaneDependentWork(WorkQueueMgr.java:186)
+	at org.batfish.coordinator.WorkQueueMgr.queueDependentAnsweringWork(WorkQueueMgr.java:545)
+	at org.batfish.coordinator.WorkQueueMgr.queueUnassignedWork(WorkQueueMgr.java:658)
+	at org.batfish.coordinator.WorkQueueMgr.processTaskCheckResult(WorkQueueMgr.java:460)
+	at org.batfish.coordinator.WorkMgr.checkTasks(WorkMgr.java:269)
+	at org.batfish.coordinator.WorkMgr.access$000(WorkMgr.java:130)
+	at org.batfish.coordinator.WorkMgr$AssignWorkTask.run(WorkMgr.java:181)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+21:59:24.020 [main] ERROR org.batfish.common.BatfishLogger - Failed to get JSON answer for work ID 961782de-1f21-4f29-b6d4-5c8a1074757f. (Was work killed?)
+
+Failed to get JSON answer for work ID 961782de-1f21-4f29-b6d4-5c8a1074757f. (Was work killed?)
+Command 11 completed successfully.
+---------------------------------------

@@ -1,0 +1,124 @@
+Loading: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //projects/allinone:allinone_main (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //projects/allinone:allinone_main (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //projects/allinone:allinone_main up-to-date:
+  bazel-bin/projects/allinone/allinone_main.jar
+  bazel-bin/projects/allinone/allinone_main
+INFO: Elapsed time: 0.293s, Critical Path: 0.01s
+INFO: 1 process: 1 internal.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/projects/allinone/allinone_main -runmode batch -cmdfile /home/liuxz/MEV/batfish-master/command/iBGP-full-bics
+Init'ed and set active network
+Uploaded snapshot.
+Parsing now.
+{"answerElements":[{"class":"org.batfish.datamodel.answers.InitInfoAnswerElement","parseStatus":{"configs/10.cfg":"PASSED","configs/100.cfg":"PASSED","configs/10010.cfg":"PASSED","configs/10020.cfg":"PASSED","configs/10030.cfg":"PASSED","configs/10040.cfg":"PASSED","configs/10050.cfg":"PASSED","configs/10060.cfg":"PASSED","configs/10070.cfg":"PASSED","configs/10080.cfg":"PASSED","configs/10090.cfg":"PASSED","configs/10100.cfg":"PASSED","configs/10110.cfg":"PASSED","configs/10120.cfg":"PASSED","configs/10130.cfg":"PASSED","configs/10140.cfg":"PASSED","configs/10150.cfg":"PASSED","configs/10160.cfg":"PASSED","configs/110.cfg":"PASSED","configs/120.cfg":"PASSED","configs/130.cfg":"PASSED","configs/140.cfg":"PASSED","configs/150.cfg":"PASSED","configs/160.cfg":"PASSED","configs/170.cfg":"PASSED","configs/180.cfg":"PASSED","configs/190.cfg":"PASSED","configs/20.cfg":"PASSED","configs/200.cfg":"PASSED","configs/210.cfg":"PASSED","configs/220.cfg":"PASSED","configs/230.cfg":"PASSED","configs/240.cfg":"PASSED","configs/250.cfg":"PASSED","configs/260.cfg":"PASSED","configs/270.cfg":"PASSED","configs/280.cfg":"PASSED","configs/290.cfg":"PASSED","configs/30.cfg":"PASSED","configs/300.cfg":"PASSED","configs/310.cfg":"PASSED","configs/320.cfg":"PASSED","configs/330.cfg":"PASSED","configs/40.cfg":"PASSED","configs/50.cfg":"PASSED","configs/60.cfg":"PASSED","configs/70.cfg":"PASSED","configs/80.cfg":"PASSED","configs/90.cfg":"PASSED"}}],"status":"SUCCESS","summary":{"numFailed":0,"numPassed":0,"numResults":0}}Hash Code: 29
+Hash Code: -60
+model-constructor-time:117
+converaged!
+ISIS-time:29
+BGP-time:218
+EVPNL3VPN-time:15913
+simulation-time:16160
+verification-property-num:52200
+FIB-Generation-time:545
+reachability-verification-time:4865
+increment-simulation-time:4
+incrementPDGNode-number:0
+child-node-number:0
+PDGUpdateTime:0
+Incremental-verification-time:0
+verification-property-num:1914
+increment-verification-time:55
+Coveraged!
+19:31:17.188 [Thread-5] ERROR org.batfish.common.BatfishLogger - Exception in container:e6515112-ca77-49bb-93a9-1ed9ee5b092a, testrig:9e527569-dfa0-4e3a-b207-9835f0d041fa; exception:java.lang.NullPointerException
+	at org.batfish.datamodel.routing_policy.expr.MatchPrefixSet.evaluate(MatchPrefixSet.java:53)
+	at org.batfish.datamodel.routing_policy.statement.If.execute(If.java:111)
+	at org.batfish.datamodel.routing_policy.RoutingPolicy.call(RoutingPolicy.java:123)
+	at org.batfish.datamodel.routing_policy.RoutingPolicy.process(RoutingPolicy.java:315)
+	at org.batfish.datamodel.routing_policy.RoutingPolicy.processBgpRoute(RoutingPolicy.java:292)
+	at org.batfish.datamodel.routing_policy.RoutingPolicy.processReadOnly(RoutingPolicy.java:202)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.lambda$computeResolutionRestriction$1(Rib.java:74)
+	at java.base/java.util.HashMap.computeIfAbsent(HashMap.java:1134)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.lambda$new$0(Rib.java:55)
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90)
+	at java.base/java.util.Spliterators$IteratorSpliterator.tryAdvance(Spliterators.java:1812)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:528)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.postProcessDelta(Rib.java:125)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.processSideEffects(Rib.java:187)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.mergeRouteGetDelta(Rib.java:85)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.access$800(Rib.java:37)
+	at org.batfish.dataplane.rib.Rib.mergeRouteGetDelta(Rib.java:399)
+	at org.batfish.dataplane.rib.Rib.mergeRouteGetDelta(Rib.java:33)
+	at org.batfish.dataplane.rib.AbstractRib.lambda$importRib$2(AbstractRib.java:109)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.batfish.dataplane.rib.AbstractRib.importRib(AbstractRib.java:106)
+	at org.batfish.dataplane.ibdp.VirtualRouter.initForIgpComputation(VirtualRouter.java:305)
+	at org.batfish.dataplane.ibdp.IncrementalBdpEngine.lambda$computeIgpDataPlane$19(IncrementalBdpEngine.java:1827)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.ForEachOps$ForEachTask.compute(ForEachOps.java:290)
+	at java.base/java.util.concurrent.CountedCompleter.exec(CountedCompleter.java:746)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinTask.doInvoke(ForkJoinTask.java:408)
+	at java.base/java.util.concurrent.ForkJoinTask.invoke(ForkJoinTask.java:736)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateParallel(ForEachOps.java:159)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateParallel(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:233)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:661)
+	at org.batfish.dataplane.ibdp.IncrementalBdpEngine.computeIgpDataPlane(IncrementalBdpEngine.java:1827)
+	at org.batfish.dataplane.ibdp.IncrementalBdpEngine.computeDataPlane(IncrementalBdpEngine.java:1344)
+	at org.batfish.dataplane.ibdp.IncrementalDataPlanePlugin.computeDataPlane(IncrementalDataPlanePlugin.java:93)
+	at org.batfish.main.Batfish.computeDataPlane(Batfish.java:716)
+	at org.batfish.main.Batfish.run(Batfish.java:2063)
+	at org.batfish.main.Driver.lambda$runBatfish$0(Driver.java:155)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+19:31:17.239 [pool-3-thread-1] ERROR org.batfish.common.BatfishLogger - exception: org.batfish.common.BatfishException: Cannot queue dataplane dependent work for 9e527569-dfa0-4e3a-b207-9835f0d041fa: Status is DATAPLANING_FAIL but no incomplete dataplaning work exists
+	at org.batfish.coordinator.WorkQueueMgr.getBlockerForDataplaneDependentWork(WorkQueueMgr.java:186)
+	at org.batfish.coordinator.WorkQueueMgr.queueDependentAnsweringWork(WorkQueueMgr.java:545)
+	at org.batfish.coordinator.WorkQueueMgr.queueUnassignedWork(WorkQueueMgr.java:658)
+	at org.batfish.coordinator.WorkQueueMgr.processTaskCheckResult(WorkQueueMgr.java:460)
+	at org.batfish.coordinator.WorkMgr.checkTasks(WorkMgr.java:269)
+	at org.batfish.coordinator.WorkMgr.access$000(WorkMgr.java:130)
+	at org.batfish.coordinator.WorkMgr$AssignWorkTask.run(WorkMgr.java:181)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+exception: org.batfish.common.BatfishException: Cannot queue dataplane dependent work for 9e527569-dfa0-4e3a-b207-9835f0d041fa: Status is DATAPLANING_FAIL but no incomplete dataplaning work exists
+	at org.batfish.coordinator.WorkQueueMgr.getBlockerForDataplaneDependentWork(WorkQueueMgr.java:186)
+	at org.batfish.coordinator.WorkQueueMgr.queueDependentAnsweringWork(WorkQueueMgr.java:545)
+	at org.batfish.coordinator.WorkQueueMgr.queueUnassignedWork(WorkQueueMgr.java:658)
+	at org.batfish.coordinator.WorkQueueMgr.processTaskCheckResult(WorkQueueMgr.java:460)
+	at org.batfish.coordinator.WorkMgr.checkTasks(WorkMgr.java:269)
+	at org.batfish.coordinator.WorkMgr.access$000(WorkMgr.java:130)
+	at org.batfish.coordinator.WorkMgr$AssignWorkTask.run(WorkMgr.java:181)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+19:31:17.329 [main] ERROR org.batfish.common.BatfishLogger - Failed to get JSON answer for work ID 2fcf3633-aed4-423e-b7d6-8c94f138e288. (Was work killed?)
+
+Failed to get JSON answer for work ID 2fcf3633-aed4-423e-b7d6-8c94f138e288. (Was work killed?)
+Command 2 completed successfully.
+---------------------------------------

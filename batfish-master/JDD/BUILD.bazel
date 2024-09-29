@@ -1,0 +1,6 @@
+# third_party/jdd/BUILD
+java_library(
+    name = "jdd",
+    srcs = ["jdd-111.jar"],
+    visibility = ["//visibility:public"],
+)

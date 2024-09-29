@@ -1,0 +1,134 @@
+Loading: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //projects/allinone:allinone_main (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //projects/allinone:allinone_main (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //projects/allinone:allinone_main up-to-date:
+  bazel-bin/projects/allinone/allinone_main.jar
+  bazel-bin/projects/allinone/allinone_main
+INFO: Elapsed time: 0.149s, Critical Path: 0.00s
+INFO: 1 process: 1 internal.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/projects/allinone/allinone_main -runmode batch -cmdfile /home/liuxz/MEV/batfish-master/command/spine-leaf200
+Init'ed and set active network
+Uploaded snapshot.
+Parsing now.
+{"answerElements":[{"class":"org.batfish.datamodel.answers.InitInfoAnswerElement","parseStatus":{"configs/leaf-1.cfg":"PASSED","configs/leaf-10.cfg":"PASSED","configs/leaf-100.cfg":"PASSED","configs/leaf-101.cfg":"PASSED","configs/leaf-102.cfg":"PASSED","configs/leaf-103.cfg":"PASSED","configs/leaf-104.cfg":"PASSED","configs/leaf-105.cfg":"PASSED","configs/leaf-106.cfg":"PASSED","configs/leaf-107.cfg":"PASSED","configs/leaf-108.cfg":"PASSED","configs/leaf-109.cfg":"PASSED","configs/leaf-11.cfg":"PASSED","configs/leaf-110.cfg":"PASSED","configs/leaf-111.cfg":"PASSED","configs/leaf-112.cfg":"PASSED","configs/leaf-113.cfg":"PASSED","configs/leaf-114.cfg":"PASSED","configs/leaf-115.cfg":"PASSED","configs/leaf-116.cfg":"PASSED","configs/leaf-117.cfg":"PASSED","configs/leaf-118.cfg":"PASSED","configs/leaf-119.cfg":"PASSED","configs/leaf-12.cfg":"PASSED","configs/leaf-120.cfg":"PASSED","configs/leaf-121.cfg":"PASSED","configs/leaf-122.cfg":"PASSED","configs/leaf-123.cfg":"PASSED","configs/leaf-124.cfg":"PASSED","configs/leaf-125.cfg":"PASSED","configs/leaf-126.cfg":"PASSED","configs/leaf-127.cfg":"PASSED","configs/leaf-128.cfg":"PASSED","configs/leaf-129.cfg":"PASSED","configs/leaf-13.cfg":"PASSED","configs/leaf-130.cfg":"PASSED","configs/leaf-131.cfg":"PASSED","configs/leaf-132.cfg":"PASSED","configs/leaf-133.cfg":"PASSED","configs/leaf-134.cfg":"PASSED","configs/leaf-135.cfg":"PASSED","configs/leaf-136.cfg":"PASSED","configs/leaf-137.cfg":"PASSED","configs/leaf-138.cfg":"PASSED","configs/leaf-139.cfg":"PASSED","configs/leaf-14.cfg":"PASSED","configs/leaf-140.cfg":"PASSED","configs/leaf-141.cfg":"PASSED","configs/leaf-142.cfg":"PASSED","configs/leaf-143.cfg":"PASSED","configs/leaf-144.cfg":"PASSED","configs/leaf-145.cfg":"PASSED","configs/leaf-146.cfg":"PASSED","configs/leaf-147.cfg":"PASSED","configs/leaf-148.cfg":"PASSED","configs/leaf-149.cfg":"PASSED","configs/leaf-15.cfg":"PASSED","configs/leaf-150.cfg":"PASSED","configs/leaf-151.cfg":"PASSED","configs/leaf-152.cfg":"PASSED","configs/leaf-153.cfg":"PASSED","configs/leaf-154.cfg":"PASSED","configs/leaf-155.cfg":"PASSED","configs/leaf-156.cfg":"PASSED","configs/leaf-157.cfg":"PASSED","configs/leaf-158.cfg":"PASSED","configs/leaf-159.cfg":"PASSED","configs/leaf-16.cfg":"PASSED","configs/leaf-160.cfg":"PASSED","configs/leaf-161.cfg":"PASSED","configs/leaf-162.cfg":"PASSED","configs/leaf-163.cfg":"PASSED","configs/leaf-164.cfg":"PASSED","configs/leaf-165.cfg":"PASSED","configs/leaf-166.cfg":"PASSED","configs/leaf-167.cfg":"PASSED","configs/leaf-168.cfg":"PASSED","configs/leaf-169.cfg":"PASSED","configs/leaf-17.cfg":"PASSED","configs/leaf-170.cfg":"PASSED","configs/leaf-171.cfg":"PASSED","configs/leaf-172.cfg":"PASSED","configs/leaf-173.cfg":"PASSED","configs/leaf-174.cfg":"PASSED","configs/leaf-175.cfg":"PASSED","configs/leaf-176.cfg":"PASSED","configs/leaf-177.cfg":"PASSED","configs/leaf-178.cfg":"PASSED","configs/leaf-179.cfg":"PASSED","configs/leaf-18.cfg":"PASSED","configs/leaf-180.cfg":"PASSED","configs/leaf-181.cfg":"PASSED","configs/leaf-182.cfg":"PASSED","configs/leaf-183.cfg":"PASSED","configs/leaf-184.cfg":"PASSED","configs/leaf-185.cfg":"PASSED","configs/leaf-186.cfg":"PASSED","configs/leaf-187.cfg":"PASSED","configs/leaf-188.cfg":"PASSED","configs/leaf-189.cfg":"PASSED","configs/leaf-19.cfg":"PASSED","configs/leaf-190.cfg":"PASSED","configs/leaf-191.cfg":"PASSED","configs/leaf-192.cfg":"PASSED","configs/leaf-193.cfg":"PASSED","configs/leaf-194.cfg":"PASSED","configs/leaf-195.cfg":"PASSED","configs/leaf-196.cfg":"PASSED","configs/leaf-197.cfg":"PASSED","configs/leaf-198.cfg":"PASSED","configs/leaf-199.cfg":"PASSED","configs/leaf-2.cfg":"PASSED","configs/leaf-20.cfg":"PASSED","configs/leaf-200.cfg":"PASSED","configs/leaf-21.cfg":"PASSED","configs/leaf-22.cfg":"PASSED","configs/leaf-23.cfg":"PASSED","configs/leaf-24.cfg":"PASSED","configs/leaf-25.cfg":"PASSED","configs/leaf-26.cfg":"PASSED","configs/leaf-27.cfg":"PASSED","configs/leaf-28.cfg":"PASSED","configs/leaf-29.cfg":"PASSED","configs/leaf-3.cfg":"PASSED","configs/leaf-30.cfg":"PASSED","configs/leaf-31.cfg":"PASSED","configs/leaf-32.cfg":"PASSED","configs/leaf-33.cfg":"PASSED","configs/leaf-34.cfg":"PASSED","configs/leaf-35.cfg":"PASSED","configs/leaf-36.cfg":"PASSED","configs/leaf-37.cfg":"PASSED","configs/leaf-38.cfg":"PASSED","configs/leaf-39.cfg":"PASSED","configs/leaf-4.cfg":"PASSED","configs/leaf-40.cfg":"PASSED","configs/leaf-41.cfg":"PASSED","configs/leaf-42.cfg":"PASSED","configs/leaf-43.cfg":"PASSED","configs/leaf-44.cfg":"PASSED","configs/leaf-45.cfg":"PASSED","configs/leaf-46.cfg":"PASSED","configs/leaf-47.cfg":"PASSED","configs/leaf-48.cfg":"PASSED","configs/leaf-49.cfg":"PASSED","configs/leaf-5.cfg":"PASSED","configs/leaf-50.cfg":"PASSED","configs/leaf-51.cfg":"PASSED","configs/leaf-52.cfg":"PASSED","configs/leaf-53.cfg":"PASSED","configs/leaf-54.cfg":"PASSED","configs/leaf-55.cfg":"PASSED","configs/leaf-56.cfg":"PASSED","configs/leaf-57.cfg":"PASSED","configs/leaf-58.cfg":"PASSED","configs/leaf-59.cfg":"PASSED","configs/leaf-6.cfg":"PASSED","configs/leaf-60.cfg":"PASSED","configs/leaf-61.cfg":"PASSED","configs/leaf-62.cfg":"PASSED","configs/leaf-63.cfg":"PASSED","configs/leaf-64.cfg":"PASSED","configs/leaf-65.cfg":"PASSED","configs/leaf-66.cfg":"PASSED","configs/leaf-67.cfg":"PASSED","configs/leaf-68.cfg":"PASSED","configs/leaf-69.cfg":"PASSED","configs/leaf-7.cfg":"PASSED","configs/leaf-70.cfg":"PASSED","configs/leaf-71.cfg":"PASSED","configs/leaf-72.cfg":"PASSED","configs/leaf-73.cfg":"PASSED","configs/leaf-74.cfg":"PASSED","configs/leaf-75.cfg":"PASSED","configs/leaf-76.cfg":"PASSED","configs/leaf-77.cfg":"PASSED","configs/leaf-78.cfg":"PASSED","configs/leaf-79.cfg":"PASSED","configs/leaf-8.cfg":"PASSED","configs/leaf-80.cfg":"PASSED","configs/leaf-81.cfg":"PASSED","configs/leaf-82.cfg":"PASSED","configs/leaf-83.cfg":"PASSED","configs/leaf-84.cfg":"PASSED","configs/leaf-85.cfg":"PASSED","configs/leaf-86.cfg":"PASSED","configs/leaf-87.cfg":"PASSED","configs/leaf-88.cfg":"PASSED","configs/leaf-89.cfg":"PASSED","configs/leaf-9.cfg":"PASSED","configs/leaf-90.cfg":"PASSED","configs/leaf-91.cfg":"PASSED","configs/leaf-92.cfg":"PASSED","configs/leaf-93.cfg":"PASSED","configs/leaf-94.cfg":"PASSED","configs/leaf-95.cfg":"PASSED","configs/leaf-96.cfg":"PASSED","configs/leaf-97.cfg":"PASSED","configs/leaf-98.cfg":"PASSED","configs/leaf-99.cfg":"PASSED","configs/spine-1.cfg":"PASSED","configs/spine-2.cfg":"PASSED"}}],"status":"SUCCESS","summary":{"numFailed":0,"numPassed":0,"numResults":0}}Hash Code: 29
+Hash Code: -60
+model-constructor-time:533
+converaged!
+ISIS-time:1
+BGP-time:766
+EVPNL3VPN-time:25913
+simulation-time:26680
+verification-property-num:1592000
+FIB-Generation-time:7760
+reachability-verification-time:302205
+increment-simulation-time:13
+incrementPDGNode-number:0
+child-node-number:0
+PDGUpdateTime:1
+Incremental-verification-time:1
+verification-property-num:8404
+increment-verification-time:258
+Coveraged!
+20:36:02.078 [Thread-5] ERROR org.batfish.common.BatfishLogger - Exception in container:b0abbf23-8f99-48aa-8779-3059fa50ee48, testrig:fd2a96f7-c125-491e-a81c-717a647e9078; exception:java.lang.NullPointerException
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at java.base/java.util.concurrent.ForkJoinTask.getThrowableException(ForkJoinTask.java:603)
+	at java.base/java.util.concurrent.ForkJoinTask.reportException(ForkJoinTask.java:678)
+	at java.base/java.util.concurrent.ForkJoinTask.invoke(ForkJoinTask.java:737)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateParallel(ForEachOps.java:159)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateParallel(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:233)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:661)
+	at org.batfish.dataplane.ibdp.IncrementalBdpEngine.computeIgpDataPlane(IncrementalBdpEngine.java:1827)
+	at org.batfish.dataplane.ibdp.IncrementalBdpEngine.computeDataPlane(IncrementalBdpEngine.java:1344)
+	at org.batfish.dataplane.ibdp.IncrementalDataPlanePlugin.computeDataPlane(IncrementalDataPlanePlugin.java:93)
+	at org.batfish.main.Batfish.computeDataPlane(Batfish.java:716)
+	at org.batfish.main.Batfish.run(Batfish.java:2063)
+	at org.batfish.main.Driver.lambda$runBatfish$0(Driver.java:155)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.NullPointerException
+	at org.batfish.datamodel.routing_policy.expr.MatchPrefixSet.evaluate(MatchPrefixSet.java:53)
+	at org.batfish.datamodel.routing_policy.statement.If.execute(If.java:111)
+	at org.batfish.datamodel.routing_policy.RoutingPolicy.call(RoutingPolicy.java:123)
+	at org.batfish.datamodel.routing_policy.RoutingPolicy.process(RoutingPolicy.java:315)
+	at org.batfish.datamodel.routing_policy.RoutingPolicy.processBgpRoute(RoutingPolicy.java:292)
+	at org.batfish.datamodel.routing_policy.RoutingPolicy.processReadOnly(RoutingPolicy.java:202)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.lambda$computeResolutionRestriction$1(Rib.java:74)
+	at java.base/java.util.HashMap.computeIfAbsent(HashMap.java:1134)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.lambda$new$0(Rib.java:55)
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90)
+	at java.base/java.util.Spliterators$IteratorSpliterator.tryAdvance(Spliterators.java:1812)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:528)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.postProcessDelta(Rib.java:125)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.processSideEffects(Rib.java:187)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.mergeRouteGetDelta(Rib.java:85)
+	at org.batfish.dataplane.rib.Rib$ResolvabilityEnforcer.access$800(Rib.java:37)
+	at org.batfish.dataplane.rib.Rib.mergeRouteGetDelta(Rib.java:399)
+	at org.batfish.dataplane.rib.Rib.mergeRouteGetDelta(Rib.java:33)
+	at org.batfish.dataplane.rib.AbstractRib.lambda$importRib$2(AbstractRib.java:109)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.batfish.dataplane.rib.AbstractRib.importRib(AbstractRib.java:106)
+	at org.batfish.dataplane.ibdp.VirtualRouter.initForIgpComputation(VirtualRouter.java:305)
+	at org.batfish.dataplane.ibdp.IncrementalBdpEngine.lambda$computeIgpDataPlane$19(IncrementalBdpEngine.java:1827)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.ForEachOps$ForEachTask.compute(ForEachOps.java:290)
+	at java.base/java.util.concurrent.CountedCompleter.exec(CountedCompleter.java:746)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+
+20:36:02.112 [pool-3-thread-1] ERROR org.batfish.common.BatfishLogger - exception: org.batfish.common.BatfishException: Cannot queue dataplane dependent work for fd2a96f7-c125-491e-a81c-717a647e9078: Status is DATAPLANING_FAIL but no incomplete dataplaning work exists
+	at org.batfish.coordinator.WorkQueueMgr.getBlockerForDataplaneDependentWork(WorkQueueMgr.java:186)
+	at org.batfish.coordinator.WorkQueueMgr.queueDependentAnsweringWork(WorkQueueMgr.java:545)
+	at org.batfish.coordinator.WorkQueueMgr.queueUnassignedWork(WorkQueueMgr.java:658)
+	at org.batfish.coordinator.WorkQueueMgr.processTaskCheckResult(WorkQueueMgr.java:460)
+	at org.batfish.coordinator.WorkMgr.checkTasks(WorkMgr.java:269)
+	at org.batfish.coordinator.WorkMgr.access$000(WorkMgr.java:130)
+	at org.batfish.coordinator.WorkMgr$AssignWorkTask.run(WorkMgr.java:181)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+
+exception: org.batfish.common.BatfishException: Cannot queue dataplane dependent work for fd2a96f7-c125-491e-a81c-717a647e9078: Status is DATAPLANING_FAIL but no incomplete dataplaning work exists
+	at org.batfish.coordinator.WorkQueueMgr.getBlockerForDataplaneDependentWork(WorkQueueMgr.java:186)
+	at org.batfish.coordinator.WorkQueueMgr.queueDependentAnsweringWork(WorkQueueMgr.java:545)
+	at org.batfish.coordinator.WorkQueueMgr.queueUnassignedWork(WorkQueueMgr.java:658)
+	at org.batfish.coordinator.WorkQueueMgr.processTaskCheckResult(WorkQueueMgr.java:460)
+	at org.batfish.coordinator.WorkMgr.checkTasks(WorkMgr.java:269)
+	at org.batfish.coordinator.WorkMgr.access$000(WorkMgr.java:130)
+	at org.batfish.coordinator.WorkMgr$AssignWorkTask.run(WorkMgr.java:181)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+20:36:03.068 [main] ERROR org.batfish.common.BatfishLogger - Failed to get JSON answer for work ID f37c2ac5-dbb4-4071-a3f0-8e34fa14af0e. (Was work killed?)
+
+Failed to get JSON answer for work ID f37c2ac5-dbb4-4071-a3f0-8e34fa14af0e. (Was work killed?)
+Command 10 completed successfully.
+---------------------------------------
