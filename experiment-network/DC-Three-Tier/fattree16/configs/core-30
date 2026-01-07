@@ -1,0 +1,239 @@
+!
+!
+!
+hostname core-30
+!
+feature bgp
+feature nv overlay
+feature vn-segment-vlan-based
+!
+router isis
+   is-type level-2
+   net 49.0030.1921.6800.0030.00
+!
+interface Ethernet1/2
+   no shutdown
+   ip address 70.0.30.0/24
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+    no shutdown
+    ip router isis
+    ip address 70.0.30.0/32
+!
+interface Ethernet0/1
+    no shutdown
+    ip router isis
+    ip address 10.5.239.0/31
+!
+interface Ethernet1/1
+    no shutdown
+    ip router isis
+    ip address 10.5.225.0/31
+!
+interface Ethernet2/1
+    no shutdown
+    ip router isis
+    ip address 10.5.226.0/31
+!
+interface Ethernet3/1
+    no shutdown
+    ip router isis
+    ip address 10.5.228.0/31
+!
+interface Ethernet4/1
+    no shutdown
+    ip router isis
+    ip address 10.5.230.0/31
+!
+interface Ethernet5/1
+    no shutdown
+    ip router isis
+    ip address 10.5.232.0/31
+!
+interface Ethernet6/1
+    no shutdown
+    ip router isis
+    ip address 10.5.234.0/31
+!
+interface Ethernet7/1
+    no shutdown
+    ip router isis
+    ip address 10.5.236.0/31
+!
+interface Ethernet8/1
+    no shutdown
+    ip router isis
+    ip address 10.5.237.0/31
+!
+interface Ethernet9/1
+    no shutdown
+    ip router isis
+    ip address 10.5.235.0/31
+!
+interface Ethernet10/1
+    no shutdown
+    ip router isis
+    ip address 10.5.224.0/31
+!
+interface Ethernet11/1
+    no shutdown
+    ip router isis
+    ip address 10.5.238.0/31
+!
+interface Ethernet12/1
+    no shutdown
+    ip router isis
+    ip address 10.5.227.0/31
+!
+interface Ethernet13/1
+    no shutdown
+    ip router isis
+    ip address 10.5.229.0/31
+!
+interface Ethernet14/1
+    no shutdown
+    ip router isis
+    ip address 10.5.231.0/31
+!
+interface Ethernet15/1
+    no shutdown
+    ip router isis
+    ip address 10.5.233.0/31
+!
+router bgp 30
+    router-id 70.0.30.0
+    cluster-id 70.0.30.0
+    address-family ipv4 unicast
+        neighbor 10.5.239.1
+           remote-as 307
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.5.225.1
+           remote-as 83
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.5.226.1
+           remote-as 99
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.5.228.1
+           remote-as 131
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.5.230.1
+           remote-as 163
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.5.232.1
+           remote-as 195
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.5.234.1
+           remote-as 227
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.5.236.1
+           remote-as 259
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.5.237.1
+           remote-as 275
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.5.235.1
+           remote-as 243
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.5.224.1
+           remote-as 67
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.5.238.1
+           remote-as 291
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.5.227.1
+           remote-as 115
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.5.229.1
+           remote-as 147
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.5.231.1
+           remote-as 179
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.5.233.1
+           remote-as 211
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended

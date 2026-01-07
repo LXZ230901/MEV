@@ -1,0 +1,151 @@
+!
+!
+!
+hostname aggregation-48
+!
+feature bgp
+feature nv overlay
+feature vn-segment-vlan-based
+!
+router isis
+   is-type level-2
+   net 49.0048.1921.6800.0048.00
+!
+interface Ethernet1/2
+   no shutdown
+   ip address 70.0.48.0/24
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+    no shutdown
+    ip router isis
+    ip address 70.0.48.0/32
+!
+interface Ethernet0/1
+    no shutdown
+    ip router isis
+    ip address 10.0.132.1/31
+!
+interface Ethernet1/1
+    no shutdown
+    ip router isis
+    ip address 10.0.140.1/31
+!
+interface Ethernet2/1
+    no shutdown
+    ip router isis
+    ip address 10.0.148.1/31
+!
+interface Ethernet3/1
+    no shutdown
+    ip router isis
+    ip address 10.0.156.1/31
+!
+interface Ethernet4/1
+    no shutdown
+    ip router isis
+    ip address 10.0.64.0/31
+!
+interface Ethernet5/1
+    no shutdown
+    ip router isis
+    ip address 10.0.65.0/31
+!
+interface Ethernet6/1
+    no shutdown
+    ip router isis
+    ip address 10.0.66.0/31
+!
+interface Ethernet7/1
+    no shutdown
+    ip router isis
+    ip address 10.0.67.0/31
+!
+router bgp 48
+    router-id 70.0.48.0
+    cluster-id 70.0.48.0
+    address-family ipv4 unicast
+        neighbor 10.0.132.0
+           remote-as 0
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.0.140.0
+           remote-as 1
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.0.148.0
+           remote-as 2
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.0.156.0
+           remote-as 3
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.0.64.1
+           remote-as 52
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.0.65.1
+           remote-as 53
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.0.66.1
+           remote-as 54
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended
+        neighbor 10.0.67.1
+           remote-as 55
+           address-family ipv4 unicast
+              send-community extended
+           address-family l2vpn evpn
+              send-community extended

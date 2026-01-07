@@ -1,0 +1,62 @@
+#load("@batfish//skylark:pmd_test.bzl", "pmd_test")
+#load("@rules_java//java:defs.bzl", "java_library")
+#
+#package(default_visibility = ["//visibility:public"])
+#
+####################################################################
+#### parser_common_files are files that antlr4-generated
+#### java code is allowed to depend on. We keep this set small
+#### and explicit to minimize the number of times we have to
+#### recompile parsers when we change unrelated things in common.
+####
+#### TODO: actually have a sensible directory structure and modules
+####################################################################
+####################################################################
+#### common_lib is the bulk of the batfish-common-protocol common code.
+#### It is so cyclicly dependent that it must be compiled as one unit
+#### rather than using efficient, modular, incremental compilation.
+####
+#### TODO: actually have a sensible directory structure and modules
+####################################################################
+#java_library(
+#    name = "MEV",
+#    srcs = glob(
+#        [
+#            "src/main/**/*.java",
+#        ]
+#    ),
+#    deps = [
+#        "//projects/batfish-common-protocol:common",
+#        "@maven//:com_carrotsearch_hppc",
+#                "@maven//:com_fasterxml_jackson_core_jackson_annotations",
+#                "@maven//:com_fasterxml_jackson_core_jackson_core",
+#                "@maven//:com_fasterxml_jackson_core_jackson_databind",
+#                "@maven//:com_fasterxml_jackson_datatype_jackson_datatype_guava",
+#                "@maven//:com_fasterxml_jackson_datatype_jackson_datatype_jdk8",
+#                "@maven//:com_fasterxml_jackson_datatype_jackson_datatype_jsr310",
+#                "@maven//:com_github_ben_manes_caffeine_caffeine",
+#                "@maven//:com_google_auto_service_auto_service_annotations",
+#                "@maven//:com_google_code_findbugs_jsr305",
+#                "@maven//:com_google_errorprone_error_prone_annotations",
+#                "@maven//:com_google_guava_guava",
+#                "@maven//:com_google_re2j_re2j",
+#                "@maven//:com_ibm_icu_icu4j",
+#                "@maven//:commons_cli_commons_cli",
+#                "@maven//:commons_io_commons_io",
+#                "@maven//:dk_brics_automaton",
+#                "@maven//:jakarta_ws_rs_jakarta_ws_rs_api",
+#                "@maven//:org_antlr_antlr4_runtime",
+#                "@maven//:org_apache_commons_commons_configuration2",
+#                "@maven//:org_apache_commons_commons_lang3",
+#                "@maven//:org_apache_commons_commons_text",
+#                "@maven//:org_apache_logging_log4j_log4j_api",
+#                "@maven//:org_codehaus_jettison_jettison",
+#                "@maven//:org_glassfish_grizzly_grizzly_framework",
+#                "@maven//:org_glassfish_grizzly_grizzly_http_server",
+#                "@maven//:org_glassfish_jersey_containers_jersey_container_grizzly2_http",
+#                "@maven//:org_glassfish_jersey_core_jersey_server",
+#                "@maven//:org_jgrapht_jgrapht_core",
+#                "@maven//:org_lz4_lz4_java",
+#                "@maven//:org_skyscreamer_jsonassert",
+#    ],
+#)

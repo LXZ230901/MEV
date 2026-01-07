@@ -1,0 +1,12 @@
+# third_party/jdd/BUILD
+# third_party/jdd/BUILD
+java_import(
+    name = "jdd",
+    jars = ["jdd-111.jar"],
+    visibility = ["//visibility:public"],
+)
+
+
+
+
+
